@@ -1,0 +1,24 @@
+h4 {
+	padding-top: 60px;
+	margin-top: -60px;
+}
+
+.with-padding {
+	padding-top: 60px;
+	margin-top: -60px;
+}
+
+.navbar .nav .dropdown-menu {
+    max-height: 400px;
+    overflow: auto;
+    content: normal;
+}​
+
+.social-icon {
+	height: 40px;
+}
+
+.button-twitter {
+	background-color: #9AE4E8;
+	background-image: none;
+}

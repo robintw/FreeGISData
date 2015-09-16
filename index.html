@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="Description" content="Categorised list of freely available GIS datasets. Includes everything from administrative boundaries to population, and from terrorist incidents to global vegetation at the last glacial maximum.">
+    <title>Free GIS Datasets - Categorised List</title>
+    <!-- Bootstrap -->
+
+    <link href="http://netdna.bootstrapcdn.com/bootswatch/2.1.1/cerulean/bootstrap.min.css" rel="stylesheet" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="custom.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css" rel="stylesheet">
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-53911609-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    <script>
+    /**
+    * Function that tracks a click on an outbound link in Google Analytics.
+    * This function takes a valid URL string as an argument, and uses that URL string
+    * as the event label.
+    */
+    var trackOutboundLink = function(url) {
+       ga('send', 'event', 'outbound', 'click', url);
+       var el = event.srcElement || event.target;
+       alert(el.target);
+       setTimeout(function() { return true; }, 400);
+    }
+    </script>
+  </head>
+  <body>
+      <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#home">Free GIS Data</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="divider-vertical"></li>
+              <li><a href="#home">Home</a></li>
+              <li class="divider-vertical"></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Physical <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#general">General</a></li>
+                  <li><a href="#land-and-ocean-boundaries">Land and Ocean Boundaries</a></li>
+                  <li><a href="#elevation">Elevation</a></li>
+                  <li><a href="#weather-and-climate">Weather and Climate</a></li>
+                  <li><a href="#hydrology">Hydrology</a></li>
+                  <li><a href="#snowice">Snow/Ice</a></li>
+                  <li><a href="#natural-disasters">Natural Disasters</a></li>
+                  <li><a href="#land-cover">Land Cover</a></li>
+                  <li><a href="#ecology">Ecology</a></li>
+                  <li><a href="#mineral-resourcesoil-and-gas">Mineral Resources/Oil and Gas</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Human <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#general_1">General</a></li>
+                  <li><a href="#administrative-boundaries">Administrative Boundaries</a></li>
+                  <li><a href="#environmental-boundaries">Environmental Boundaries</a></li>
+                  <li><a href="#land-use">Land Use</a></li>
+                  <li><a href="#lakes-oceans-and-other-water-sources">Lakes, Oceans and 
+                    other water sources</a></li>
+                  <li><a href="#wars-conflict-and-crime">Wars, Conflict and Crime</a></li>
+                  <li><a href="#population">Population</a></li>
+                  <li><a href="#buildings-roads-and-points-of-interest">Buildings, Roads 
+                    and Points of Interest</a></li>
+                  <li><a href="#transport-and-communications">Transport and Communications</a></li>
+                  <li><a href="#gazetteers-placefeature-names">Gazetteers (Place/Feature 
+                    names)</a></li>
+                  <li><a href="#miscellaneous">Miscellaneous</a></li>
+
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Country-specific <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#afghanistan">Afghanistan</a></li>
+                  <li><a href="#antarctica">Antarctica</a></li>
+                  <li><a href="#arctic">Arctic</a></li>
+                  <li><a href="#australia">Australia</a></li>
+                  <li><a href="#austria">Austria</a></li>
+                  <li><a href="#belgium">Belgium</a></li>
+                  <li><a href="#belize">Belize</a></li>
+                  <li><a href="#bolivia">Bolivia</a></li>
+                  <li><a href="#brazil">Brazil</a></li>
+                  <li><a href="#canada">Canada</a></li>
+                  <li><a href="#central-america">Central America</a></li>
+                  <li><a href="#chile">Chile</a></li>
+                  <li><a href="#china">China</a></li>
+                  <li><a href="#denmark">Denmark</a></li>
+                  <li><a href="#east-timor">East Timor</a></li>
+                  <li><a href="#finland">Finland</a></li>
+                  <li><a href="#france">France</a></li>
+                  <li><a href="#germany">Germany</a></li>
+                  <li><a href="#greece">Greece</a></li>
+                  <li><a href="#india">India</a></li>
+                  <li><a href="#ireland">Ireland</a></li>
+                  <li><a href="#italy">Italy</a></li>
+                  <li><a href="#japan">Japan</a></li>
+                  <li><a href="#kenya">Kenya</a></li>
+                  <li><a href="#mexico">Mexico</a></li>
+                  <li><a href="#namibia">Namibia</a></li>
+                  <li><a href="#nepal">Nepal</a></li>
+                  <li><a href="#the-netherlands">The Netherlands</a></li>
+                  <li><a href="#new-zealand">New Zealand</a></li>
+                  <li><a href="#norway">Norway</a></li>
+                  <li><a href="#papa-new-guinea">Papa New Guinea</a></li>
+                  <li><a href="#peru">Peru</a></li>
+                  <li><a href="#philippines">Philippines</a></li>
+                  <li><a href="#portugal">Portugal</a></li>
+                  <li><a href="#puerto-rico">Puerto Rico</a></li>
+                  <li><a href="#romania">Romania</a></li>
+                  <li><a href="#russia">Russia</a></li>
+                  <li><a href="#slovenia">Slovenia</a></li>
+                  <li><a href="#spain">Spain</a></li>
+                  <li><a href="#south-africa">South Africa</a></li>
+                  <li><a href="#switzerland">Switzerland</a></li>
+                  <li><a href="#united-kingdom-uk">United Kingdom (UK)</a></li>
+                  <li><a href="#united-arab-emirates">United Arab Emirates</a></li>
+                  <li><a href="#united-states-of-america-usa">United States of America (USA)
+                  </a></li>                  
+                </ul>
+              </li>
+              <li class="divider-vertical"></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li class="divider-vertical"></li>
+            </ul>
+
+            <span class="pull-right">
+              <a class="btn btn-primary" href="http://www.facebook.com/sharer.php?s=100&p[title]=Free+GIS+Data&p[summary]=Categorised+list+of+freely+available+GIS+datasets.+Includes+everything+from+administrative+boundaries+to+hydrology%2C+and+from+terrorist+incidents+to+climate.&p[url]=www.freegisdata.rtwilson.com" target="_blank"><i class="icon-facebook"></i> Like</a>
+              <a class="btn btn-primary" href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Ffreegisdata.rtwilson.com%2F&text=Free%20GIS%20Datasets%20-%20Categorised%20List&tw_p=tweetbutton&url=http%3A%2F%2Ffreegisdata.rtwilson.com%2F&via=sciremotesense"><i class="icon-twitter"></i> Tweet</a>
+            <a class="btn btn-warning" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GJ9AT2QXZPTZY">Donate</a>
+          </span>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+<div class='pull-right'>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- FreeGISHome_Button -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:125px;height:125px"
+     data-ad-client="ca-pub-0651515465088743"
+     data-ad-slot="8354735472"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<a name="home"></a>
+<p class="with-padding lead">This page contains a categorised list of links to over 300 sites providing freely available geographic datasets - all ready for loading into a Geographic Information System.</p>
+
+<p>We have links to everything from arctic permafrost maps to gridded population data - simply scroll through the list, or use the dropdown menus above to jump to a specific section of interest. See the FAQ for more information on the what, who, how and why of the list.</p>
+
+
+<p>
+  <div class="alert alert-error">
+  <strong>Beware:</strong> The data linked to below may be inaccurate, incomplete, or just plain wrong. As always, critically examine the data you are using, look at what organisation produced it and what agenda they may have, and beware that there are disputes over some of the data (particularly country boundaries).
+</div>
+
+<p>This list was last updated on  4 January 2013.</p>
+
+<h2 id="physical-geography">Physical Geography</h2>
+<h4 id="general">General</h4>
+<ul>
+<li><a href="http://www.naturalearthdata.com/">Natural Earth - Vector</a>: Includes coastline,
+land, oceans, islands, rivers, lakes, glaciated areas and bathymetry. Available at multiple levels of detail. A version of this data is also available in the Wagner VII projection, which has good equal area properties, <a href="http://nordpil.com/go/resources/wagner-vii-gis-data/">here</a>.</li>
+<li><a href="http://www.naturalearthdata.com/">Natural Earth - Raster</a>: Includes various raster images, intended
+for use as backgrounds for other data, for example hypsometric tints, satellite derived land cover,
+shaded relief etc.</li>
+<li><a href="https://www.iscgm.org/gmd/">Global Map</a>: A set of consistent GIS layers covering the whole globe at 1km resolution including: transportation, elevation, drainage, vegetation, administrative boundaries, land cover, land use and population centres. Produced by the International Steering Committee on Global Mapping. <span class="label label-info">Registration Required</span></li>
+<li><a href="http://www.diva-gis.org/gdata">DIVA-GIS Country Data</a>: A collection of data collected from a number of the sources below - includes administrative areas, inland water, roads and railways, elevation, land cover, population and climate. Probably the easiest place to get a simple set of data for a specific country.</li>
+<li><a href="http://geodata.grid.unep.ch/">UNEP GEOdata</a>: A wide range of data from the United Nations Environment Programme including Global Forest Cover, Global Potential Evapotranspiration, Global Average Monthly Temperatures, Dams, Watershed Boundaries and much more. <em>To get data, choose Advanced Search and select Geospatial Data Sets from the top drop-down link</em></li>
+<li><a href="http://koordinates.com/">Koordinates</a>: GIS data aggregation site including data in a number of categories such as elevation, environment, climate etc. Some global datasets, some based on continents, some for specific countries. Mostly vector, but some raster. <span class="label label-info">Registration required</span></li>
+<li><a href="http://www.mapcruzin.com/">MapCruzin</a>: GIS aggregation site including wide range of data for various areas of the world. Some datasets appears to be of low quality, but others are good.</li>
+<li><a href="http://www.fao.org/geonetwork/srv/en/main.home">GeoNetwork</a>: GIS aggregation site including a wide range of data under various categories (both human and physical).</li>
+<li><a href="http://www.eea.europa.eu/data-and-maps#tab-datasets">European Environment Agency</a>: Maps and datasets from the European Environment Agency, covering a huge range of physical geography and environmental topics. Europe only.</li>
+</ul>
+
+<h4 id="land-and-ocean-boundaries">Land and Ocean Boundaries</h4>
+<ul>
+<li><a href="http://www.ngdc.noaa.gov/mgg/shorelines/gshhs.html">GSHHS</a>: A Global Self-consistent, Hierarchical, High-resolution Shoreline Database - which basically means it's good quality (no internal inconsistencies, good accuracy).</li>
+</ul>
+<h4 id="elevation">Elevation</h4>
+<ul>
+<li><a href="http://asterweb.jpl.nasa.gov/gdem.asp">GDEM</a>: 30m resolution global elevation data derived from ASTER satellite images</li>
+<li><a href="http://srtm.csi.cgiar.org/">SRTM</a>: Approx 90m (3 arc-second) resolution elevation data from the Shuttle Radar Topography Mission for the whole world.</li>
+<li><a href="http://www.ngdc.noaa.gov/mgg/global/global.html">ETOPO1</a>: 1 arc-minute resolution relief model including ocean bathymetry.</li>
+<li><a href="http://www.marine-geo.org/portals/gmrt/">Global Multi-Resolution Topography</a>: Gridded elevation at approximately 100m resolution, covering terrestrial and sea-floor topography.</li>
+<li><a href="http://www.opentopography.org/index.php">OpenTopography</a>: A community-based site giving free access to high-resolution topography data. Data at the moment appears to be clustered on the West Coast of the USA and in Greenland, and is available both as dense point clouds and processed DEMs.</li>
+</ul>
+<h4 id="weather-and-climate">Weather and Climate</h4>
+<ul>
+<li><a href="http://www.worldclim.org/">WorldClim</a>: Climate data for past, present and predicted future conditions. Includes
+temperature (min, max, mean) and precipitation. 1km x 1km resolution.</li>
+<li><a href="http://gisclimatechange.ucar.edu/">NCAR GIS Climate Change Scenarios</a>: Lots of data from the National Centre for Atmospheric Research models, including data used by the IPCC in their reports. <span class="label label-info">Registration required</span></li>
+<li><a href="http://www.cru.uea.ac.uk/cru/data/">CRU Climate Datasets</a>: Various datasets including temperature, precipitation, pressure, drought,
+paleoclimate and others, from the (infamous) Climate Research Unit at the University of East Anglia. High and low resolution datasets available.</li>
+<li><a href="http://www.ccafs-climate.org/data/">Downscaled GCM Portal</a>: A wide range of downscaled (that is, higher resolution data) created from the outputs of a wide range of GCMs. Covers the majority of important climate variables.</li>
+<li><a href="http://eca.knmi.nl/">European Climate Assessment and Dataset</a>: Gridded observation data across Europe, including cloudiness, temperature, precipitation, humidity, pressure, snow and sunshine.</li>
+<li><a href="http://csi.cgiar.org/Aridity/">Global Potential Evapotranspiration and Aridity Index</a>: Potential Evapotranspiration data and indices of aridity at 30 arc-second resolution in raster format.</li>
+<li><a href="http://www.globaerosol.info/project_description/data.htm">GlobAerosol</a>: Aerosol data in raster format (provided as NetCDF files), including estimations of AOD at 550nm and the Angstrom coefficient.</li>
+<li><a href="http://gacp.giss.nasa.gov/data_sets/">Global Aerosol Climatology Project</a>: Monthly averages of Aerosol Optical Thickness and the Angstrom exponent from 1981 to 2006.</li>
+<li><a href="http://www.cmsaf.eu/bvbw/appmanager/bvbw/cmsafInternet?_nfpb=true&amp;_pageLabel=cmsaf_data_access&amp;cmsaf_portlet_data_acessgsbDocumentPath=Content%2FData__Access%2Fproduct__availability__en.html">Satellite Application Facility on Climate Monitoring</a>: Provides near real-time and retroactively-generated datasets of cloud cover, type and temperature, surface radiation budget and temperatures, amongst others.</li>
+<li><a href="http://cait.wri.org/">Climate Analysis Indicators Tool</a>: Carbon Dioxide emissions data by country, and by US state, including measures of adaption.</li>
+<li><a href="http://isccp.giss.nasa.gov/products/d2yeardsets.html">International Satellite Cloud Climatology Project</a>: Monthly averages of a number of cloud variables including cloud cover (and associated breakdown by frequency), cloud top temperature, cloud water path, cloud optical thickness etc.</li>
+<li><a href="http://www.knmi.nl/cliwoc/">Climatological Database for the world's oceans (CLIWOC)</a>: Data compiled from ships logs compiled during voyages between 1750 and 1850. Includes various meteorological observations, broken down by date, ship and year.</li>
+<li><a href="http://iridl.ldeo.columbia.edu/">IRI/LDEO Climate Data Library</a>: A wide range of over 300 datasets from various climate models and datasets.</li>
+<li><a href="http://www.woudc.org/data_e.html">World Ozone and Ultraviolet Radiation Data Center</a>: Extensive set of data collected from many stations across the world, recording ozone information (from ozonesonde ascents) and ground-level ultraviolet irradiance.</li>
+</ul>
+<h4 class="anchor" id="hydrology">Hydrology</h4>
+<ul>
+<li><a href="http://hydrosheds.cr.usgs.gov/">HydroSHEDS</a>: Hydrological data and maps based on the STRM elevation data. Includes river networks, watershed boundaries, drainage directions and flow accumulations for the globe.</li>
+<li><a href="http://ccm.jrc.ec.europa.eu/php/index.php?action=view&amp;id=24">Catchment Characterisation and Modelling</a>: Data on river basins, catchments and rivers for the European Union area.</li>
+<li><a href="http://www.fao.org/geonetwork/srv/en/metadata.show?id=30914">Major Watersheds of the World Deliniation</a>: Vector data showing the outlines of major watersheds (river basins) across the world.</li>
+<li><a href="http://wateriso.eas.purdue.edu/waterisotopes/pages/data_access/ArcGrids.html">Water Isotopes</a>: Global grids of hydrogen and oxygen isotope composition of precipitation and environmental waters in ArcGRID format. Data can be downloaded for whole globe or individual continents.</li>
+<li><a href="http://water.jrc.ec.europa.eu/">JRC Water Portal</a>: European water data from the EC Joint Research Centre, including data on quantity, quality, price, use, exploitation and irrigation.</li>
+<li><a href="http://www.gebco.net/">General Bathymetric Chart of the Oceans</a>: A range of gridded bathymetric datasets compiled by a group of experts.</li>
+</ul>
+<h4 class="anchor" id="snowice">Snow/Ice</h4>
+<ul>
+<li><a href="http://www.glims.org/RGI/">Randolph Glacier Inventory</a>: A global inventory of glacier outlines, including some multi-temporal data. Major focus on quality control.</li>
+<li><a href="http://nsidc.org/fgdc/maps/">NSIDC Frozen Ground maps</a>: Maps of various types of frozen ground (permafrost) in the Arctic and various other areas. <em>Data can be downloaded by clicking on the map name then selecting 'Access Data'</em></li>
+<li><a href="http://nsidc.org/data/masie/">Multisensor Analyzed Sea Ice Extent (MAISE)</a>: Sea ice extent for the Northern Hemisphere from the NSIDC</li>
+</ul>
+<h4 id="natural-disasters">Natural Disasters</h4>
+<ul>
+<li><a href="http://www.ldeo.columbia.edu/chrr/research/hotspots/coredata.html">Natural Disaster Hazards</a>: Hazard Frequency, Mortality and Economic Loss Risk as gridded data for the globe. Covers cyclones, drought, earthquakes, flood, landslide, volcano and a combination of them all ('multihazard').</li>
+<li><a href="http://earthquake.usgs.gov/earthquakes/eqarchives/epic/kml/">USGS Earthquakes Database</a>: KML files of
+all earthquakes recorded by the USGS (across the whole world) from 1973 to present. Available as one dataset or grouped by magnitude or year.</li>
+<li><a href="http://www.seismo.ethz.ch/static/GSHAP/">Global Seismic Hazard Map</a>: Gridded data showing hazard risk of seismic activity across the globe.</li>
+<li><a href="http://www.ncdc.noaa.gov/oa/ibtracs/">IBTrACS</a>: Hurricane and tropical cyclone tracks, including attributes such as minimum pressure, maximum winds. (Also, USA tracks can be visualised <a href="http://csc.noaa.gov/hurricanes/">here</a>)</li>
+<li><a href="http://www.ngdc.noaa.gov/hazard/tsu_db.shtml">NOAA/WDC Historical Tsunami Database</a>: Location information of tsunami sources and run-up events, including many attributes (eg. maximum water height, travel time). Available  in TSV format which can be imported into GIS systems.</li>
+<li><a href="http://bioval.jrc.ec.europa.eu/products/burnt_areas_gba2000/global2000.php">Global Burnt Area</a>: 1km resolution map of areas of burnt vegetation across the world. Aggregated products at 0.5 and 1 degree resolutions are also available.</li>
+<li><a href="http://activefiremaps.fs.fed.us/gisdata.php">MODIS Fire Detection Data</a>: Frequently updated data (including last 7 days of fires) in 1km grid format, derived from thermal anomalies from MODIS data.</li>
+<li><a href="http://thunder.msfc.nasa.gov/data/">Lightning and Atmospheric Electricity Dataset</a>: Wide range of data on lightning activity, including average flashes per grid cell per year.</li>
+<li><a href="http://www.csc.noaa.gov/hurricanes/#">NOAA Historical Hurricane Tracks</a>: Hurricane tracks for all North/Central American hurricanes. <em>Data can be exported by clicking the Download button on the top right.</em></li>
+<li><a href="http://sedac.ciesin.columbia.edu/data/collection/ndh">Natural Disaster Hotspots</a>: A wide range of geographic data on natural disasters (including volcanoes, earthquakes, landslide, flood and 'multihazards') with hazard frequency, economic loss etc.</li>
+</ul>
+<h4 id="land-cover">Land Cover</h4>
+<p>(See also <a href="index.html#land-use">Land Use</a> below)</p>
+<ul>
+<li><a href="http://landcover.usgs.gov/landcoverdata.php">USGS Land Cover Institute</a>: Great set of links to almost all land cover datasets. Links here include most of the datasets below, and many more esoteric data such as river observations, aquifers data and ocean colour information. <em>Although the page starts with US data, it continues with data for other continents lower down the page</em></li>
+<li><a href="http://www.eea.europa.eu/data-and-maps/data/corine-land-cover-2000-raster-1">Corine Land Cover Map</a>: Europe only. Satellite derived land cover, available as at
+1990, 2000 and 2006 in vector and raster formats. 100m and 250m resolutions.</li>
+<li><a href="http://dup.esrin.esa.int/globcover/">GLOBCOVER</a>: Global land cover dataset at 300m resolution from the MERIS sensor on the ENVISAT satellite.</li>
+<li><a href="http://earthobservatory.nasa.gov/Newsroom/view.php?id=22585">MODIS Global Land Cover</a>: 1km and 4km resolution global land cover maps derived from MODIS images.</li>
+<li><a href="http://www.geog.umd.edu/landcover/1km-map.html">UMD GLC</a>: 1km resolution global land cover maps from the University of Maryland created using a classification tree approach from MODIS data</li>
+<li><a href="http://bioval.jrc.ec.europa.eu/products/glc2000/data_access.php">GLC2000</a>: Global land cover map for the year 2000 created from the VEGETATION instrument on the SPOT-4 satellite. Individual continents were classified by local experts, increasing the quality of the classification overall.</li>
+<li><a href="http://www.iscgm.org/gmd/download/glcnmo.html">Global Land Cover by National Mapping Organisations</a>: 1km data of land cover for the globe, with a classification scheme based on the UN FAO LCCS, facilitating easy comparison with other land cover products.</li>
+<li><a href="http://www.fao.org/geonetwork/srv/en/main.home?uuid=ba4526fd-cdbf-4028-a1bd-5a559c4bff38">GLC-SHARE</a>: Global Land Cover data combined from 'best available' national land cover maps. 1km resolution.</li>
+<li><a href="http://www.worldwildlife.org/science/data/item1877.html">Global Lakes and Wetlands Database</a>: Global vector datasets showing areas of lakes, reservoirs, wetlands, swamps, bogs etc.</li>
+<li><a href="http://anthro.unige.ch/lgmvegetation/">Vegetation Map at Last Glacial Maximum</a>: Broad-scale map of the world showing vegetation cover at the Last Glacial Maximum (25,000 - 15,000 BP)</li>
+<li><a href="http://www.wri.org/publication/pilot-analysis-global-ecosystems-grassland-ecosystems#data">Grassland GIS</a>: Grassland extent data, along with grassland usage (eg. livestock intensity per area of grassland)</li>
+<li><a href="http://www.wri.org/publication/pilot-analysis-global-ecosystems-forest-ecosystems#data">Forest GIS</a>: Percentage tree-cover, population density and tree cover, share of wood in fuel consumption etc.</li>
+<li><a href="http://www.eorc.jaxa.jp/ALOS/en/palsar_fnf/fnf_index.htm">PALSAR Forest/Non-Forest map</a>: A very detailed (50m resolution) forest map for the whole globe, created from SAR data.</li>
+</ul>
+<h4 id="ecology">Ecology</h4>
+<ul>
+<li><a href="http://www.sage.wisc.edu/atlas/maps.php">Atlas of the Biosphere</a>: Raster maps of environmental variables including soil pH, potential evapotranspiration, average snow depth and many more.</li>
+<li><a href="http://lifemapper.org/index.shtml">Lifemapper</a>: Species distribution maps - both recorded and predicted (based on climate, terrain and land cover). Covers a huge number of species. *Data is available by clicking on Species, searching for a species and then clicking on the number of points and choosing the SHP link at the top. Alternatively, web services are available.</li>
+<li><a href="http://www.worldwildlife.org/science/ecoregions/item1267.html">WWF World Ecoregions</a>: Shapefile of ecoregions as defined by the WWF Conservation Science Program.</li>
+<li><a href="http://sedac.ciesin.columbia.edu/es/anthropogenicbiomes.html">Anthropogenic Biomes</a>: Ecosystem unit maps derived from human interactions with ecosystems creating 'anthropogenic biomes'. Gridded data at 5 arc-seconds available.</li>
+<li><a href="http://sedac.ciesin.columbia.edu/species/">Amphibian Species Distribution Grids</a>: Approximately 1km resolution gridded data showing species distribution. One file per species.</li>
+<li><a href="http://sedac.ciesin.columbia.edu/es/hanpp.html">Net Primary Productivity</a>: Gridded Net Primary Productivity data across the globe, including a novel measure of 'Human Appropriation of NPP' measuring how much of the NPP of an area humans are using.</li>
+<li><a href="http://soilgrids.org/">World Soil Information</a>: Gridded datasets covering the world's soils at a maximum resolution of 5 arc-minutes with 22 attributes for each cell including organic carbon content, gypsum content, water capacity etc. Data is given for topsoil and subsoil. More detailed datasets for individual countries and continents are available.</li>
+<li><a href="http://www.iiasa.ac.at/Research/LUC/External-World-soil-database/HTML/index.html?sb=1">Harmonized World Soil Database</a>: Combining regional and national soil databases and maps from many countries under the Land Use Change programme of the UN FAO. Includes soil units and parameters (such as pH, depth, and texture) and is at a resolution of 30 arc-seconds.</li>
+<li><a href="http://www.ipf.tuwien.ac.at/radar/index.php?go=ascat">ERS/MetOp Soil Moisture</a>: 25-50km resolution soil moisture data from satellite scatterometer measurements.</li>
+<li><a href="http://www.cgiar-csi.org/data/global-high-resolution-soil-water-balance">Global High Resolution Soil Water Balance</a>: Raster data containing actual evapotranspiration and soil water deficit with a resolution of 30 arcseconds (approx 1km).</li>
+<li><a href="http://docs.wri.org/page_forest_gh_sc_final.zip">Global Carbon Storage in Soils</a>: Gridded carbon storage in soils for the world, from the World Resources Institute.</li>
+<li><a href="http://www.reefbase.org/gis_maps/download.aspx">ReefBase GIS</a>: GIS data about coral reefs worldwide, including extensive attribute data.</li>
+<li><a href="http://www.nceas.ucsb.edu/globalmarine/impacts">Human Impacts to Marine Ecosystems</a>: Data from the National Center for Ecological Analysis and Synthesis on human impacts to marine ecosystems. Includes fishing impacts, ocean acidification, sea surface temperature, pollutants and more.</li>
+<li><a href="http://cdiac.ornl.gov/ftp/">Carbon Dioxide Information Analysis Center</a>: All data products from this center are available for download, including atmospheric CO2 concentrations (including the famous Mauna Loa dataset), precipitation data, long-term modelling data and more.</li>
+<li><a href="http://datadownload.unep-wcmc.org/datasets">UNEP WCMC</a>: Variety of datasets from the United Nations Environment Programme including global wetlands, global distribution of coral reefs, mangrove distributions and more.</li>
+<li><a href="http://www.aquamaps.org/">Aquamaps</a>: Standardised distribution maps for over 11,000 species of fish, marine mammals and invertebrates. *Data available for download under High Resolution Maps and Environmental Data links.</li>
+<li><a href="http://maps.tnc.org/gis_data.html">Terrestrial Ecoregions of the World</a>: Vector data showing a biogeographic classification of terrestrial ecological regions across the world.</li>
+<li><a href="http://www.feow.org/downloads.php">Freshwater Ecoregions of the World</a>: Vector data showing a biogeographic classification of freshwater ecological regions across the world.</li>
+<li><a href="http://maps.tnc.org/gis_data.html">Marine Ecoregions of the World</a>: Vector data showing a biogeographic classification of marine ecological regions across the world.</li>
+<li><a href="http://www.iucn.org/about/work/programmes/species/our_work/about_freshwater/what_we_do_freshwater/bio_fresh/">BioFRESH</a>: Contemporary distributions of freshwater species, mapped in vector format across the world</li>
+</ul>
+<h4 id="mineral-resourcesoil-and-gas">Mineral Resources/Oil and Gas</h4>
+<ul>
+<li><a href="http://portal.onegeology.org/">OneGeology Portal</a>: Combined geological maps from many geological organisations across the world. Levels of detail vary across the world, but basic data is available for many areas, with more detail for certain countries.</li>
+<li><a href="http://tin.er.usgs.gov/mrds/">Mineral Resources Data System</a>: Vector data of mineral resources across the world including names, locations, descriptions, geological characteristics etc.</li>
+<li><a href="http://tin.er.usgs.gov/vms/">Volcanogenic Massive Sulphide deposits</a>: Information on VMS deposits from across the world with attribute data.</li>
+<li><a href="http://og.decc.gov.uk/en/olgs/cms/data_maps/offshore_maps/offshore_maps.aspx">North Sea Oil Offshore Maps and GIS - English sector</a>: Maps from the UK government showing licensing information, locations of wells and country-ownership boundaries.</li>
+<li><a href="http://www.ens.dk/EN-US/OILANDGAS/DATA/GISMAP/Sider/Forside.aspx">North Sea Oil Offshore Maps and GIS - Dutch sector</a>: Same as above but for the Dutch-controlled area of the North Sea. <em>To download data click the links under 'Download' on the right-hand side</em></li>
+<li><a href="http://www.nlog.nl/en/pubs/maps/other_maps/other_maps.html">North Sea Oil Offshore Maps and GIS - Netherland sector</a>: Same as above but for Netherland-controlled area of the North Sea.</li>
+</ul>
+<hr />
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- FreeGISBanner -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-0651515465088743"
+     data-ad-slot="9383648750"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<hr />
+
+
+<h2 id="human-geography">Human Geography</h2>
+<h4 id="general_1">General</h4>
+<ul>
+<li><a href="http://geodata.grid.unep.ch/">UNEP GEOdata</a>: A wide range of data from the United Nations Environment Programme including Nighttime Lights, Pollutant Emissions, Commercial Shipping Activity, Protected Areas and Administrative Boundaries. <em>To get data, choose Advanced Search and select Geospatial Data Sets from the top drop-down link</em></li>
+<li><a href="http://velluminformation.com/2012/01/28/google-earth-world-bank-data-and-kml-files/">World Bank Geodata</a>: A wide range of World Bank datasets converted to KML format, includes GNP, schooling and financial data.</li>
+<li><a href="http://cod.humanitarianresponse.info/country-region">Humanitarian Response Common and Fundamental Operational Datasets Registry</a>: List of freely available datasets for many countries run by the UN Humanitarian Response programme. Contains administrative boundaries, transport, population and more. <em>Fairly empty at the moment but due to be updated soon</em></li>
+<li><a href="http://www.sage.wisc.edu/atlas/maps.php">Atlas of the Biosphere</a>: Gridded human data including per capita oil usage, literacy rate, population growth rate, built-up land and many more.</li>
+<li><a href="http://koordinates.com/">Koordinates</a>: GIS data aggregation site including data in a number of categories such as administrative boundaries, transportation etc. Some global datasets, some based on continents, some for specific countries. Mostly vector, but some raster. <span class="label label-info">Registration required</span></li>
+<li><a href="https://gistdata.itos.uga.edu/">GISTPortal</a>: Wide range of GIS data from a project funded by UNAID to provide spatial data for humanitarian purposes. <span class="label label-info">Registration Required</span></li>
+<li><a href="http://database.espon.eu/grid">ESPON Grid Data</a>: Various human geography indicators in gridded raster form across Europe, including GDP, population and unemployment in 2003 and 2006.</li>
+<li><a href="http://www.mapcruzin.com/">MapCruzin</a>: GIS aggregation site including wide range of data for various areas of the world. Some data appears to be of low quality, but others are good.</li>
+<li><a href="http://www.fao.org/geonetwork/srv/en/main.home">GeoNetwork</a>: GIS aggregation site including a wide range of data under various categories (both human and physical).</li>
+<li><a href="https://maps.google.com/gallery/">Google Maps Gallery</a>: A wide range of user-submitted geographic data, available as a KML file</li>
+<li><a href="http://themasites.pbl.nl/tridion/en/themasites/hyde/index.html">History Database of the Global Environment</a>: Gridded time-series of population, land-use for the last 12,000 years. Also includes GDP, agriculatural areas, yields and greenhous gas emissions for the last century.</li>
+</ul>
+<h4 id="administrative-boundaries">Administrative Boundaries</h4>
+<ul>
+<li><a href="http://www.naturalearthdata.com/">Natural Earth</a>: Includes countries, disputed areas,
+first-order admin (departments, states etc), populated places, urban polygons, parks and protected
+areas and water boundaries. Available at multiple levels of detail.</li>
+<li><a href="http://gadm.org/">GADM</a>: Global administrative boundaries, with extensive attribute sets. Covers countries and up to four levels of internal administrative boundary (states, departments, counties etc).
+(For Land Cover see above)</li>
+<li><a href="http://www.unsalb.org/">UN Second Administrative Level Boundaries</a>: Multi-level administrative boundaries data for the world, created in co-ordination with national mapping agencies. Contains information on historic changes since 1990. <span class="label label-info">Registration required</span></li>
+<li><a href="http://thematicmapping.org/downloads/world_borders.php">World Borders</a>: World country borders with attributes including country codes (FIPS, ISO etc), area and populations.</li>
+<li><a href="http://database.espon.eu/world">Europe in the World</a>: Administrative boundaries for Europe with lots of attribute data for each country/region including information on economy, demography and infrastructure.</li>
+<li><a href="http://nils.weidmann.ws/projects/cshapes/">CShapes - Historical Boundaries</a>: Historical state boundaries and capitals post-WW2, world-wide, including all changes and dates of changes.</li>
+<li><a href="http://www.marineregions.org/index.php">VLIZ Maritime Boundaries</a>: Maritime boundaries and areas of Exclusive Economic Zones, including detailed attribute data on treaties etc. From the Flanders Marine Institute.</li>
+<li><a href="http://efele.net/maps/tz/">TZ timezones</a>: A map of timezone areas in the world as used in the Unix TZ database format, from which we get the naming Europe/London, America/New_York etc. In shapefile format.</li>
+</ul>
+<h4 id="environmental-boundaries">Environmental Boundaries</h4>
+<ul>
+<li><a href="http://free-gis-data.blogspot.com/2009/04/world-spatial-database-on-protected.html">World Spatial Database of Protected Areas</a>: Global vector database of marine and terrestrial protected areas. Rather complicated to download from - instructions at bottom of linked page.</li>
+<li><a href="http://www.iucnredlist.org/technical-documents/spatial-data">IUCN 2013 Red List</a>: Set of shapefiles produced by the IUCN showing the distribution of endangered species of plants and animals across the world</li>
+<li><a href="http://www.protectedplanet.net/">Protected Planet</a>: Map of protected areas across the whole world, of almost all types. Available for download by clicking the 'Download All' link on the homepage, and then scrolling to the bottom and choosing KMZ, SHP or CSV.</li>
+</ul>
+<h4 id="land-use">Land Use</h4>
+<p>(See also <a href="index.html#land-cover">Land Cover</a> above)</p>
+<ul>
+<li><a href="http://www.sage.wisc.edu/iamdata/">Global Land Use Dataset</a>: Gridded data at 0.5 degree resolution showing population density, potential natural vegetation, cropland extent, grazing land extent, built-up land extent, crop extent (for 18 major crops) and land suitability for cultivation</li>
+<li><a href="http://sedac.ciesin.columbia.edu/data/collection/wildareas-v2">Human Influence and Footprint</a>: Human Influence Index and Human Footprint calculated from various factors which exert human influence on ecosystems, for example population distribution, urban areas, navigable rivers etc. Available at 30 arc-second resolution.</li>
+<li><a href="http://sedac.ciesin.columbia.edu/es/aglands.html">Global Agricultural Lands</a>: Extent and intensity of use of agricultural lands (both cropland and pasture) in 2000 from MODIS and SPOT images and agricultural inventory data.</li>
+<li><a href="http://www.iwmigiam.org/info/main/index.asp">Global Irrigated Area and Rainfed Crops Areas</a>: Vector mapping of global irrigated cropland and rainfed cropland.</li>
+<li><a href="http://www.sage.wisc.edu/download/sacks/crop_calendar.html">Crop Calendar GIS</a>: Gridded data on planting dates and harvesting dates across the world for 19 crops. Available at 5 minute and 0.5 degree resolutions.</li>
+<li><a href="http://www.earthstat.org/">EarthStat: Agricultural Land Use and potential use</a>: A number of GIS datasets on agricultural land use, including global cropland and pasture from 1700 to 2007, harvested areas and yields for 175 crops, and global fertiliser application rates.</li>
+<li><a href="http://database.espon.eu/urban">ESPON Urban Morphological Data</a>: Data on urban areas for Europe including many attributes.</li>
+<li><a href="http://www.eea.europa.eu/data-and-maps/data/urban-morphological-zones-2000-umz2000-f1v0-1">European Urban Morphological Zones</a>: Data derived from the CORINE landcover dataset showing all sets of urban areas lying less than 200m apart.</li>
+</ul>
+<h4 id="lakes-oceans-and-other-water-sources">Lakes, Oceans and other Water Sources</h4>
+<ul>
+<li><a href="http://sedac.ciesin.columbia.edu/es/seawifs.html">Coastal Water Quality</a>: Quality of coastal waters across the globe measured by chlorophyll concentrations from SeaWIFS satellite. Data for 1998 and 2007.</li>
+<li><a href="http://atlas.gwsp.org/index.php">Global Reservoir and Dam Database</a>: Geographically-referenced data on all reservoirs with a storage capacity of more than 0.1 cubic kilometres. The data consists of polygons outlining reservoirs at high spatial resolution with extensive metadata about the dam and reservoir. <span class="label label-info">Registration required</span></li>
+</ul>
+<h4 id="wars-conflict-and-crime">Wars, Conflict and Crime</h4>
+<ul>
+<li><a href="http://www.acleddata.com/data">ACLED</a>: Armed Conflict Location and Event Data - containing all reported conflict events in 50 countries in the developing world. Data from 1997 to present, and in Afghanistan and Pakistan from 2006 until present.</li>
+<li><a href="http://www.start.umd.edu/gtd/">Global Terrorism Database</a>: A database of terrorist events (both domestic and international) across the world from 1970-2008, including location and attribute information.</li>
+</ul>
+<h4 id="population">Population</h4>
+<ul>
+<li><a href="http://sedac.ciesin.columbia.edu/gpw/">Gridded Population of the World</a>: Includes raw population, population density, both historic, current and predicted.</li>
+<li><a href="http://sedac.ciesin.columbia.edu/data/collection/grump-v1">Global Rural-Urban Mapping Project</a>: Based on the above, but includes information on rural and urban population balances.</li>
+<li><a href="http://www.worldpop.org.uk/">WorldPop</a>: High-resolution, contemporary data on population across Africa, Asia and Central/Southern America. Combines the AfriPop, AmeriPop and AsiaPop projects.</li>
+<li><a href="http://nordpil.com/go/resources/world-database-of-large-cities/">Large Urban Areas 1950-2050</a>: Historic, current and future estimates of populations in large urban areas of the world.</li>
+<li><a href="http://sage.wisc.edu/people/schneider/research/data.html">Global Urban Extent</a>: Maps showing urban extent across the world, at 500m resolution, derived from MODIS images. <span class="label label-info">Requires email to author to download</span></li>
+<li><a href="http://www.geohive.com/">GeoHive</a>: Population and country statistics. <em>Not provided in GIS data formats, but can easily be converted from CSV</em></li>
+</ul>
+<h4 id="buildings-roads-and-points-of-interest">Buildings, Roads and Points of Interest</h4>
+<ul>
+<li><a href="http://www.geofabrik.de/data/download.html">OpenStreetMap</a>: Crowd-sourced data for the whole world consisting of most things you'd find on a standard local paper map: points of interest, buildings, roads and road names, ferry routes etc.</li>
+<li><a href="https://mapzen.com/metro-extracts/">OSM Metro Extracts</a>: City-sized extracts of the OpenStreetMap dataset, updated weekly for cities across the world</li>
+<li><a href="http://www.poi-factory.com/">POI Factory</a>: Point of Interest files originally designed for use in GPS units, but they can be loaded into a GIS fairly easily. Widely varying quality, and coverage, but includes such things as shop
+and business locations (eg. all Tesco stores, all McDonald's restaurants) as well as places of worship, speed cameras etc. Registration is required. <em>To download data in a GIS-ready form choose Garmin CSV format on the download page. The CSV file will contain Latitude and Longitude in WGS-84 co-ordinates, as well as descriptions.</em></li>
+<li><a href="http://s3.amazonaws.com/simplegeo-public/places_dump_20110628.zip">SimpleGeo's Places</a>: Point of Interest data from SimpleGeo, provided as a 2Gb Zip file and licensed under the Creative Commons license. Contains over 21 million POIs for over 63 countries.</li>
+<li><a href="https://www.google.com/fusiontables/DataSource?dsrcid=579353">Nuclear Power Station locations</a>: Locations of all nuclear power stations worldwide (according to the IAEA), provided as a Google Fusion Table. <em>Export to CSV for easy import to a GIS system</em></li>
+</ul>
+<h4 id="transport-and-communications">Transport and Communications</h4>
+<ul>
+<li><a href="http://openflights.org/data.html">Open Flights</a>: Airport, airline and route data across the globe. Data is provided as CSV files which can be easily processed to produce GIS outputs. Data includes all known airports, and a large number of routes betwen airports.</li>
+<li><a href="http://msi.nga.mil/NGAPortal/MSI.portal?_nfpb=true&amp;_pageLabel=msi_portal_page_62&amp;pubCode=0015">World Port Index</a>: Dataset from the National Geospatial Intelligence Agency listing approximately 3700 ports across the world, with location and facilities offered.</li>
+<li><a href="http://www.ciesin.columbia.edu/confluence/display/roads/Global+Roads+Data">Global Roads Open Access Data Set</a>: A vector dataset of roads across the world, using a globally consistent data model, and suitable for mapping at the 1:250,000 level. Only roads between settlements are included, not residential streets, and the dataset is accurate to approximately 50m. <em>This dataset is in beta-testing at the moment and will be fully available shortly</em></li>
+<li><a href="http://www.cablemap.info/">Undersea Telecommunications Cables</a>: Open source undersea telecommunication cables map, updated frequently. Data can be visualised in the embedded viewer or shapefiles can be downloaded by clicking the <em>Raw Data</em> link on the top right.</li>
+<li><a href="http://bioval.jrc.ec.europa.eu/products/gam/index.htm">Global Map of Accessibility</a>: Raster grids of travel time to major cities, covering the globe at 30 arc second resolution.</li>
+<li><a href="https://github.com/capitainetrain/stations">Capitaine European Train Stations</a>: Metadata for all train stations in Europe including latitude and longitude.</li>
+</ul>
+<h4 id="gazetteers-placefeature-names">Gazetteers (place/feature names)</h4>
+<ul>
+<li><a href="http://earth-info.nga.mil/gns/html/namefiles.htm">NGIS Country Files</a>: A list of names of regions, areas and populated places for each country in the world, provided by the US Government, with geo-references for each place.</li>
+<li><a href="http://download.geonames.org/export/dump/countryInfo.txt">Geonames Country Information</a>: List of all countries in the world with ISO and ISO3 country code (eg. GB for the United Kingdom and FR for France) with capital city, area, population, internet top-level domain, currency, official languages and neighbours.</li>
+<li><a href="http://sedac.ciesin.columbia.edu/data/set/grump-v1-settlement-points">GRUMP Settlement Points</a>: Locations of individual settlements (as a time series, showing new settlements appearing over time), derived from the Global Rural-Urban Mapping Project.</li>
+</ul>
+<h4 id="miscellaneous">Miscellaneous</h4>
+<ul>
+<li><a href="http://www.netdimes.org/new/?q=node/65">Internet Map</a>: Data which can be used to produce maps like those shown <a href="http://www.chrisharrison.net/index.php/Visualizations/InternetMap">here</a> showing major linkages in the internet, as well as density of people online.</li>
+</ul>
+
+<hr />
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- FreeGIS_Banner2 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-0651515465088743"
+     data-ad-slot="3963512754"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<hr />
+<h1 id="individual-countryarea-datasets">Individual Country/Area Datasets</h1>
+<h4 id="afghanistan">Afghanistan</h4>
+<ul>
+  <li><a href="http://afghanistan.cr.usgs.gov/geospatial-reference-datasets">USGS Afghanistan Datasets</a>: Includes satellite images, geology, airborne data and scanned maps.</li>
+  <li><a href="http://afghanistanelectiondata.org/open">Afghanistan Election Data</a>: Open Data from elections in Afghanistan including final results.</li>
+  <li><a href="http://afg.humanitarianresponse.info/mapcentre">Humanitarian Response Afghanistan</a>: Wide range of datasets including education, health, water and logistics layers.</li>
+</ul>
+<h4 id="antarctica">Antarctica</h4>
+<ul>
+<li><a href="http://www.add.scar.org/">Antarctic Digital Database</a>: Compilation of medium-scale topographic data for Antarctica, managed by the British Antarctic Survey. <span class="label label-info">Registration required</span>
+</li>
+<li><a href="http://www.quantarctica.org/downloads/">Quantarctica</a>: A huge set of Antarctic datasets, including basemaps, elevation, satellite imagery, glaciology and geophysical data. Provided in a 7Gb package with QGIS, all set up for viewing, or available through FTP for individual datasets.</li>
+<li><a href="http://usarc.usgs.gov/drg_dload.shtml">US Antarctic Resource Centre</a>: Scanned topographic maps, LiDAR-derived DEMs at approx 5m resolution and some aerial photography. <em>Click the links on the left to select different datasets</em></li>
+<li><a href="http://data.aad.gov.au/">Australian Antarctic Data Centre</a>: Data from the Australian antarctic programme, including sea ice data, maps and aerial photography.</li>
+<li><a href="http://www.natice.noaa.gov/products/kml_daily_ant.html">US National Ice Centre - Antarctic Daily Ice Extents</a>: Daily ice extent maps for the area around Antarctica in KML format.</li>
+<li><a href="http://nsidc.org/data/">National Snow and Ice Data Centre</a>: A wide range of Antarctic data from the US-based National Snow and Ice Data Centre</li>
+<li><a href="http://www.polarview.aq/mapview.php">Polar View - Antarctic Node</a>: Synthetic Aperture Radar, plus derived sea ice concentration and ice charts for download, covering the Antarctic coast.</li>
+<li><a href="https://www.bas.ac.uk/project/bedmap-2/#about">BEDMAP2</a>: The second, and significantly improved, version of datasets for ice bed, surface and ice thickness in Antarctica.</li>
+</ul>
+<h4 id="arctic">Arctic</h4>
+<ul>
+<li><a href="http://www.grida.no/prog/polar/ipa/index.htm">IPA Circum-arctic Permafrost Map</a>: Vector map of permafrost and ground ice in the arctic region, from the International Permafrost Association.</li>
+<li><a href="http://pubs.usgs.gov/of/2011/1246/downloads.html">Arctic Ocean Sea Surface Temperatures</a>: Sea Surface Temperature from 1981-2009 in both raster (.img), vector (.shp), and ASCII (.csv) formats.</li>
+</ul>
+<h4 id="australia">Australia</h4>
+<ul>
+<li><a href="http://www.environment.gov.au/metadataexplorer/explorer.jsp">Discover Information Geographically</a>: Compilation site including most governmental GIS data, such as land cover, boundaries and biodiversity data.</li>
+<li><a href="https://www.ga.gov.au/products/servlet/controller?event=DEFINE_PRODUCTS">Geoscience Australia</a>: Australian Government GIS data site, including a lots of free data such as topographic maps, geological data, hydrological maps and more.</li>
+<li><a href="http://data.gov.au/data/?format=Shapefile">Australian Government Data</a>: Data from the Australian Government's OpenData programme, including soil, climate and census data. <em>This link shows only data available as shapefiles. Click the KML link to show KML data instead.</em></li>
+<li><a href="http://www.planning.sa.gov.au/index.cfm?objectid=EC51DF57-F203-0D46-AF1953724CB3E1EC">South Australia Bushfire Protection Areas</a>: Shapefiles showing extent of bushfire protection areas introduced in 2006.</li>
+<li><a href="http://dds.information.qld.gov.au/DDS/search.aspx">Queensland GIS service</a>: Data from the government of Queensland including biodiversity, pests, census data and more.</li>
+<li><a href="http://mapdata.environment.nsw.gov.au">New South Wales Office of the Environment and Heritage</a>: Data from the NSW government which includes conservation reserves, biodiversity data, vegetation mapping and soil mapping.</li>
+<li><a href="https://www.data.vic.gov.au/data/dataset">Victoria Open Data</a>: Open data for the state of Victoria</li>
+</ul>
+<h4 id="austria">Austria</h4>
+<ul>
+<li><a href="http://data.opendataportal.at/dataset/digitales-gelandemodell-wien-5m-raster/resource/952d6651-c429-4311-8daa-a92e887ef4dd">Vienna Digital Terrain Model</a>: 5m resolution Digital Terrian Model of Vienna, Austria. Click the green button on the top right to download as a TIFF file.</li>
+<li><a href="http://www.wien.gv.at/stadtentwicklung/stadtvermessung/geodaten/viewer/geodatendownload.html">Vienna City Survey</a>: Very detailed vector mapping of the whole of the City of Vienna - extremely high-level of detail.</li>
+</ul>
+<h4 id="belgium">Belgium</h4>
+<ul>
+<li><a href="https://download.agiv.be/Catalogus">Agency for Geographical Information of Flanders</a>: A wide range of data from the AGIV, including land cover, aerial photographs, hydrographic data, administrative data and DEMs. <span class="label label-warning">In Dutch</span></li>
+<li><a href="http://www.mumm.ac.be/datacentre/Catalogues/datathemelayers.php">Belgium Marine Data</a>: Data on the marine environment around Belgium including anchorage areas, naviation routes, power cables, wind farms, dredging zones and sand banks.</li>
+<li><a href="http://www.hisgis.be/start_en.htm">Belgian Historical GIS</a>: Historical GIS data focusing on population and boundary changes.</li>
+<li><a href="https://dov.vlaanderen.be/dovweb/html/services.html#Quartairgeologische%20Ondergrondkaarten">Sub-surface maps of Flanders</a>: Geological data for the Flanders area.</li>
+<li><a href="http://www.gisoost.be/home/download.php?MENU=DATA">East Flanders Data</a>: Cadastral data (including historical data), orthophotos and more.</li>
+
+</ul>
+<h4 id="belize">Belize</h4>
+<ul>
+<li><a href="http://www.biodiversity.bz/mapping/warehouse/">Belize Spatial Data Warehouse</a>: A range of data for Belize, including boundaries, ecosystems, protected areas, historic roads, basemaps and settlements.</li>
+</ul>
+<h4 id="bolivia">Bolivia</h4>
+<ul>
+  <li><a href="http://www.geo.gob.bo/">GeoBolivia</a>: Bolivian Government GIS portal.</li>
+  <li><a href="http://essm.tamu.edu/bolivia/sitios_de_interes_es.htm">Department of Ecosystem Science and Management</a>: A wide range of datasets from the Ecosystem Science and Management government agency in Bolivia.</li>
+</ul>
+<h4 id="brazil">Brazil</h4>
+<ul>
+<li><a href="http://www.ibge.gov.br/english/geociencias/default_prod.shtm#REC_NAT">Brazil Geosciences Products</a>: Wide range of datasets for Brazil, including basemaps, administrative boundaries and land use. <em>You may need a bit of Portuguese knowledge to use the site, and some maps are only available in PDF format. Many are available as Shapefiles in the directories whose names end with SHAPE.</em> <span class="label label-warning">In Portugeuese</span></li>
+</ul>
+<h4 id="canada">Canada</h4>
+<ul>
+<li><a href="http://www.geogratis.gc.ca/">GeoGratis</a>: A wide range of free datasets covering Canada including population, Landsat mosaics, land capability, hydrology and radar data - as well as many others.</li>
+<li><a href="http://www.geobase.ca/geobase/en/data/index.html">GeoBase</a>: Freely available GIS data overseen by the Canadian Council on Geomatics. Includes administrative boundaries, geographical names, elevation, orthorectified satellite imagery, road networks and much more. <span class="label label-info">Registration required</span></li>
+<li><a href="http://atlas.nrcan.gc.ca/site/english/maps/topo/map">Toporama</a>: Simplified raster versions of the standard National Topographic Survey maps at 1:50,000 and 1:250,000.</li>
+<li><a href="http://agdc.usgs.gov/data/usgs/erosafo/akcan_lcc/akcan_lcc.html">Alaska and Canada Land Cover</a>: 1km resolution land cover data for Alaska and Canada.</li>
+<li><a href="http://www12.statcan.gc.ca/census-recensement/2011/geo/RNF-FRR/index-eng.cfm">Canada Road Network File</a>: Canada's national road network as shapefile data with information including street names, types, directions and address ranges.</li>
+<li><a href="http://sis.agr.gc.ca/cansis/">Canadian Soil Information Service</a>: Soil maps for the whole of Canada available for download in GIS formats (mainly shapefiles with associated attribute data). Includes lots of metadata and process/methodology information.</li>
+<li><strong>State/City Specific</strong><ul>
+<li><a href="http://www.empr.gov.bc.ca/Mining/Geoscience/BedrockMapping/Pages/BCGeoMap.aspx">British Colombia Digital Geology Map</a>: Detailed geological maps for the province of British Colombia, available in shapefile and PDF formats. Data from 2005 and a beta version from 2011.</li>
+<li><a href="http://www.data.gov.bc.ca/">DataBC</a>: Various free and open datasets from the government of British Columbia *(to find geographic datasets, follow links to the catalogue, and then choose Geospatial Dataset under Resource Types)*</li>
+<li><a href="https://mli2.gov.mb.ca/">Manitoba Land Initiative</a>: Detailed land data for the province of Manitoba. <span class="label label-info">Registration required</span></li>
+<li><a href="http://www.gov.ns.ca/geonova/home/default.asp">GeoNOVA</a>: Geospatial data portal for the province of Nova Scotia. </li>
+<li><a href="http://www.ags.gov.ab.ca/publications/pubs.aspx?series=dig">Alberta Geological Survey Data</a>: Geology for the province of Alberta.</li>
+<li><a href="http://www.snb.ca/geonb1/e/DC/catalogue-E.asp">New Brunswick GIS downloads</a>: Orthoimages, topography and address information for New Brunswick</li>
+<li><a href="http://www.geomaticsyukon.ca/data/datasets">Yukon Spatial Data</a>: Main spatial data site for Yukon, including ortho-imagery and vector and raster GIS data.</li>
+<li><a href="https://www.geosask.ca/Portal/ptk">Saskatchewan Spatial Data</a>: Main spatial data site for the Canadian Province of Saskatchewan. <span class="label label-info">Registration required</span></li>
+<li><a href="http://www.gov.pe.ca/gis/index.php3?number=77543">Prince Edward Island GIS Data</a>: GIS data from the government of Prince Edward Island.</li>
+</ul>
+</li>
+</ul>
+<h4 id="central-america">Central America</h4>
+<ul>
+<li><a href="http://sedac.ciesin.columbia.edu/conservation/proarca.html">Central American Land Cover Classification and Conservation Status</a>: 1km resolution data showing land-cover and conservation status (eg. protected with legal limits, proposed protection) as of 1995.</li>
+<li><a href="http://mapserver.stri.si.edu/geonetwork/srv/en/main.home">Smithsonian Tropical Research Institue</a>: A wide range of data, mostly covering Panama.</li>
+</ul>
+<h4 id="chile">Chile</h4>
+<ul>
+<li><a href="http://sit.conaf.cl/">Chile Land Cover data</a>: Officially endorsed land-cover of Chile <span class="label label-warning">In Spanish</span></li>
+<li><a href="http://siit2.bcn.cl/mapas_vectoriales">Chile GIS data</a>: More general Chile data, including roads, railways, urban areas and administrative divisions</li>
+<li><a href="http://www.rulamahue.cl/mapoteca/catalogos/chile.html">More Chile GIS data</a>: A range of Chilean GIS data</li>
+</ul>
+<h4 id="china">China</h4>
+<ul>
+<li><a href="http://sedac.ciesin.columbia.edu/data/collection/cddc">China Dimensions Data Collection</a>: GIS data including administrative regions, census data linked to maps and agricultural data.</li>
+<li><a href="http://www.dbr.nu/data/geo/">Diamond Bay Data</a>: Chinese counties, census statistics and Digital Chart of the World China GIS layers.</li>
+<li><a href="http://www.fas.harvard.edu/~chgis/data/chgis/downloads/v4/">China Historical GIS</a>: Historical boundaries, tribal areas etc for China from 1820 back to 222 BCE. <span class="label label-info">Registration required</span></li>
+</ul>
+<h4 id="denmark">Denmark</h4>
+<ul>
+  <li><a href="http://www.kortforsyningen.dk/">Kortforsyningen</a>: A wide range of data for Denmark including aerial photos, LiDAR data, historical maps and more. <span class="label label-info">Registration required</span></li>
+  <li><a href="http://internet.miljoeportal.dk/Sider/Forside.aspx">Danmarks Miljoportal</a>: Environmental and ecological data for Denmark</li>
+</ul>
+<h4 id="east-timor">East Timor</h4>
+<ul>
+<li><a href="http://websig.civil.ist.utl.pt/timorgis/Data_Sets@133.aspx">Timor-Leste GIS Portal</a>: Wide range of datasets for East Timor, including infrastructure, natural environment, road networks, base maps, elevation and more.</li>
+</ul>
+<h4 id="finland">Finland</h4>
+<ul>
+<li><a href="http://www.maanmittauslaitos.fi/en/opendata/list-of-the-digital-data-products-to-be-opened">National Land Survey of Finland</a>: A wide range of data including general topographic maps (1:1,000,000 and 1:4,500,000), administrative divisions, elevations and place names and orthophotos for Finland. (For bulk download, in Finnish, try <a href="http://kartat.kapsi.fi/">here</a></li>
+<li><a href="http://en.ilmatieteenlaitos.fi/open-data-manual">Finnish Meteorological Service</a>: Open meteorological data for Finland</li>
+<li><a href="http://tilastokeskus.fi/tup/rajapintapalvelut/inspire.html">Statistics for Finland</a>: Demographic data available for download</li>
+<li><a href="http://www.hri.fi/fi/">Helsinki data</a>: Geographic data in a wide range of categories - both raster and vector - for Helsinki</li>
+<li><a href="http://maps.helcom.fi/website/mapservice/index.html">HELCOM Baltic sea data</a>: Baltic Marine Environment Protection Commission (Helsinki Commission) data on the whole Baltic sea area including biodiversity, environmental monitoring, pollution and more.</li>
+</ul>
+<h4 id="france">France</h4>
+<ul>
+<li><a href="http://professionnels.ign.fr/gratuit">IGN</a>: Free GIS data for France including relief, drainage, boundaries, raster maps and coastline. <span class="label label-warning">In French</span></li>
+<li><a href="http://opendata.paris.fr/opendata/jsp/site/Portal.jsp">ParisData</a>: Open Data for Paris, including lots of georeferenced data. <span class="label label-warning">In French</span></li>
+<li><a href="http://www.geolittoral.developpement-durable.gouv.fr/ortho-littorale-r181.html">Coastal Orthophotos</a>: Orthophotos over the whole of the French coast available for download. <span class="label label-warning">In French</span></li>
+</ul>
+<h4 id="germany">Germany</h4>
+<ul>
+<li><a href="http://nibis.lbeg.de/cardomap3/">NIBIS GIS</a>: German GIS aggregation service allowing you to display and download various maps of Germany.</li>
+<li><a href="http://arnulf.us/PLZ">German Postal Areas</a>: Vector polygons of German postal areas (similar to zip code or postcode areas). <span class="label label-warning">In German</span></li>
+</ul>
+<h4 id="greece">Greece</h4>
+<ul>
+<li><a href="http://geodata.gov.gr/geodata/">Greece Open Geodata</a>: The Greek government's open GeoData portal, with a wide range of datasets.</li>
+</ul>
+<h4 id="india">India</h4>
+<ul>
+<li><a href="http://bhuvan.nrsc.gov.in/data/download/index.php">Gateway to Indian Earth Observation</a>: A range of Earth Observation-derived data for India including NDVI, ocean temperature and CartoDEM (a DEM for the whole of India at 30m resolution). <span class="label label-info">Registration required</span></li>
+</ul>
+<h4 id="ireland">Ireland</h4>
+<ul>
+<li><a href="http://census.cso.ie/censusasp/saps/boundaries/census2006_boundaries.htm">Irish Census Boundaries 2006</a>: Census boundaries from the Irish census in 2006, in shapefile format.</li>
+<li><a href="http://www.npws.ie/mapsanddata/">Irish National Parks and Wildlife Data</a>: Data on habitats, species, designated sites and biodiversity. Some data requires registration to download.</li>
+<li><a href="http://www.dcenr.gov.ie/Spatial+Data/Geological+Survey+of+Ireland/GSI+Spatial+Data+Downloads.html">Geological Survey of Ireland</a>: Geology data for Ireland including bedrock type, boreholes, aquifers and quarry locations.</li>
+<li><a href="http://gis.epa.ie/">Irish Environmental Protection Agency</a>: A wide range of environmental data including a generalised rivers/streams dataset, CORINE landcover extracts, soils, historical mines and more.</li>
+</ul>
+<h4 id="italy">Italy</h4>
+<ul>
+<li><a href="http://www.mondogis.com/geodata.html">MondoGIS datasets list</a>: Links to a wide range of Italian GIS datasets including DEMs, administrative boundaries, bathymetry, transport networks and more. </li>
+<li><a href="http://www.pcn.minambiente.it/GN/">Italian Environment Ministry Geoportal</a>: Various environmental data from the Environment Ministry of Italy</li>
+<li><a href="http://www.istat.it/it/archivio/104317">IStat Administrative Boundaries</a>: Administrative boundaries for the whole of Italy, down to the 'comuni' level, available as shapefiles in WGS 1984 or local Italian co-ordinate systems.</li>
+</ul>
+<h4 id="japan">Japan</h4>
+<ul>
+<li><a href="http://www.dbr.nu/data/geo/">Diamond Bay Data</a>: Japanese place names and rivers.</li>
+</ul>
+<h4 id="kenya">Kenya</h4>
+<ul>
+<li><a href="http://www.wri.org/publication/content/9291">Kenya GIS</a>: Wide range of GIS data (provided as shapefiles) for Kenya including population, land cover, agriculture, poverty and climate.</li>
+<li><a href="http://192.156.137.110/gis/default.asp">International Livestock Research Institute</a>: Administrative boundaries, villages, agricultural statistics, economical statistics and much more.</li>
+<li><a href="https://www.opendata.go.ke/">Kenya Open Data</a>: The Kenyan governmental open data site, with a range of data covering the areas of education, poverty, employment agriculture, justice and more.</li>
+</ul>
+<h4 id="mexico">Mexico</h4>
+<ul>
+<li><a href="http://sedac.ciesin.columbia.edu/mexico.html">Georeferenced Population</a>: 1990 population for Mexican states, municipalities and islands. Data aligns with US TIGER data at US-Mexican border.</li>
+</ul>
+<h4 id="namibia">Namibia</h4>
+<ul>
+<li><a href="http://www.uni-koeln.de/sfb389/e/e1/download/atlas_namibia/main_namibia_atlas.html">Digital Atlas of Namibia</a>: Freely available data for Namibia in categories of Climate, Physical Geography, Living-resources, Land and History and People, Services and Infrastructure.</li>
+<li><a href="http://www.shef.ac.uk/sandsea/index">Namib Sand Sea Digital Database</a>: Set of data covering the Namib Sand Sea (area of sand dunes in Namibia) including DEMs, satellite images, point ages and dune crests.</li>
+</ul>
+<h4 id="nepal">Nepal</h4>
+<ul>
+  <li><a href="http://geoportal.icimod.org/downloads/">ICIMOD Geoportal</a>: Data from the International Centre for Integrated Mountain Development, focusing on the Himalayas.</li>
+</ul>
+<h4 id="the-netherlands">The Netherlands</h4>
+<ul>
+  <li><a href="https://www.pdok.nl/nl/producten/pdok-downloads/downloadservice-basis-registratie-topografie-brt">PDOK</a>: Digital topographic maps at various scales available as both vector and raster data.</li>
+  <li><a href="http://gisopenbaar.overijssel.nl/geoportal_extern/catalog/main/home.page">Overijssel GIS Open Data</a>: Open GIS data for the Dutch region of Overijssel.</li>
+</ul>
+<h4 id="new-zealand">New Zealand</h4>
+<ul>
+<li><a href="http://www.linz.govt.nz/topography/topo-maps/index.aspx">LINZ Topographic Maps</a>: Freely available raster copies of Land Information New Zealand topographic maps at 1:50,000 and 1:250,000 scales. Equivalent of Ordnance Survey maps for New Zealand.</li>
+<li><a href="http://data.linz.govt.nz/">LINZ Data Service</a>: A new service by Land Information New Zealand. Topographic, hydrographic, survey, titles and geodetic datasets are freely accessible with more LINZ datasets added over time. Aerial photographs for the whole of New Zealand have recently been added.</li>
+<li><a href="http://koordinates.com/">Koordinates</a>: GIS data aggregation site which focuses especially on New Zealand. It includes data in a number of categories such as elevation, environment, climate etc. Mostly vector, but some raster. <span class="label label-info">Registration required</span></li>
+<li><a href="http://lris.scinfo.org.nz/">LRIS Data Portal</a>: GIS data for New Zealand from Landcare Research, focussing on soil and environmental data and including 25m-resolution DEMs of North and South Island.</li>
+<li><a href="http://www.niwa.co.nz/our-science/oceans/bathymetry">New Zealand Bathymetry</a>: 250m-resolution raster bathymetry data for New Zealand's Exclusive Economic Zone.</li>
+<li><a href="http://geoportal.doc.govt.nz/geoportal/catalog/main/home.page">Department of Conservation Geoportal</a>: A range of conservation-related datasets to download, including conservation areas, marine reserves, campsites, huts and area boundaries.</li>
+</ul>
+<h4 id="norway">Norway</h4>
+<ul>
+<li><a href="http://kilden.skogoglandskap.no/map/kilden/index.jsp">Norweigan Land Cover</a>: Various datasets concerning land resources in Norway provided by the Norwegian Landscape and Forest Institute, including land type, forest, tree species and site index with a scale from 1:5000 to 1:250000.</li>
+</ul>
+<h4 id="papa-new-guinea">Papa New Guinea</h4>
+<ul>
+<li><a href="http://gis.mortonblacketer.com.au/upngis/downloads.htm">Coastline</a>: 1:50,000 coastline of Papa New Guinea, in MapInfo format. Derived from Landsat data.</li>
+</ul>
+<h4 id="peru">Peru</h4>
+<ul>
+<li><a href="GeoCatMin">http://geocatmin.ingemmet.gob.pe/geocatmin/index_en.html?idioma=EN</a>: Wide range of geodata for Peru including administrative boundaries, geomorphology, geology, hydrology, satellite images and more.</li>
+</ul>
+<h4 id="philippines">Philippines</h4>
+<ul>
+<li><a href="http://www.philgis.org/freegisdata.htm">GIS Data Clearinghouse</a>: Various datasets relating to the Philippines including boundaries, DEMs, rainfall, and river data.</li>
+</ul>
+<h4 id="portugal">Portugal</h4>
+<ul>
+<li><a href="http://sniamb.apambiente.pt/webatlas/">Portugese Web Atlas</a>: Many datasets including physical geography data (temperature, wind, geology, seismic data, ecology, soils), human geography data (tourism, population, services), protected areas and detailed data on the Azores and Madeira</li>
+</ul>
+<h4 id="puerto-rico">Puerto Rico</h4>
+<ul>
+<li><a href="http://tin.er.usgs.gov/geology/pr/">Geology of Puerto Rico</a>: Detailed geological maps in vector format, with extended attribute information. From USGS.</li>
+</ul>
+<h4 id="romania">Romania</h4>
+<ul>
+<li><a href="http://earth.unibuc.ro/">geo-spatial.org Romania</a>: Good selection of vector and raster layers for Romania, including historical information.</li>
+<li><a href="https://geodata.ethz.ch/geoidea.ro/geoidea_index.jsp">GeoIDEA.RO</a>: GEodata Openness Initiative for Development and Economic Advancement in Romania - a wide range of open geodata for Romania</li>
+</ul>
+<h4 id="russia">Russia</h4>
+<ul>
+<li><a href="http://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/html/data1.htm">Coal Resources of the Soviet Union</a>: Various data about coal in the former Soviet Union, including deposits, basins, ages etc.</li>
+<li><a href="http://www.iiasa.ac.at/Research/FOR/russia_cd/download.htm#download">Land Resources of Russia</a>: Includes climate, permafrost, soils, transportation, land productivity and much more.</li>
+</ul>
+<h4 id="slovenia">Slovenia</h4>
+<ul>
+<li><a href="http://gis.arso.gov.si/geoportal/catalog/main/home.page">Slovenian Environment Agency</a>: Environmental datasets, mostly in vector formats, including climate, flooding, waterbodies and meteorological stations</li>
+<li><a href="http://rkg.gov.si/GERK/">Ministry of Agriculture, Forestry and Food</a>: Land use shapefiles available for download</li>
+<li><a href="http://nfp-si.eionet.europa.eu/Podatki_in_informacije/F1084793652">EIONET</a>: Further environmental data including waste management sites and pollution measures</li>
+<li><a href="http://www.stat.si/gis/Baza.aspx?lang=en">Statistical Office of the Republic of Slovenia</a>: Demographic data available for download</li>
+</ul>
+<h4 id="spain">Spain</h4>
+<ul>
+<li><a href="http://servicios2.marm.es/sia/visualizacion/descargas/mapas.jsp">Ministry of Environment SIA</a>: Vector data focussing on water resources (lakes, reservoirs, rivers, watersheds, wetlands, environmental protection areas, polluants etc) but also including regions, populated places etc. <span class="label label-warning">In Spanish</span></li>
+<li><a href="http://centrodedescargas.cnig.es/CentroDescargas/index.jsp">Center for National Geographic Information</a>: Data including grid co-ordinates, names of places and more for Spain. <span class="label label-info">Registration required</span></li>
+<li><a href="http://cuarzo.igme.es/sigeco/Default.aspx">Geological Survey in Spain</a>: Detailed geological mapping of Spain</li>
+<li><a href="http://www.juntadeandalucia.es/medioambiente/site/rediam/menuitem.aedc2250f6db83cf8ca78ca731525ea0/?vgnextoid=7b3ba7215670f210VgnVCM1000001325e50aRCRD&amp;lr=lang_es">The Andalusia Environmental Information Network (REDIAM)</a>: Includes natural resources, climate, water, urban environments, and more.</li>
+<li><a href="http://idechg.chguadalquivir.es/geoportal/en/services/downloads.html">Guadalquivir River Basin District</a>: Variety of data including hydrology, geomorphology, administrative boundaries and protected areas available for download as PDFs, KMLs and shapefiles.</li>
+<li><a href="http://www.dicoruna.es/webeiel/">A Coruna Province Council</a>: Data for the A Coruna province in North-Western Spain, including topography, demography, urban planning, utilities and government services.</li>
+<li><a href="http://idena.navarra.es/busquedas/catalog/main/home.page">Navarra Data Site</a>: GIS data for the Navarra Territory of Spain.</li>
+<li><a href="http://www.icc.cat/vissir3/">Institut Cartogràfic de Catalunya data</a>: Data from the cartographic institute of Catalonia (a region of Spain).</li>
+</ul>
+<h4 id="south-africa">South Africa</h4>
+<ul>
+<li><a href="http://www.dwaf.gov.za/iwqs/gis_data/river/rivs500k.html">Department of Water Affairs</a>: South African drainage network at 1:500,000. Topologically correct with detailed metadata (including name, seasonality of flow, Strahler order and more).</li>
+<li><a href="http://bgis.sanbi.org/">Biodiversity GIS</a>: Wide range of biodiversity data for South Africa.</li>
+</ul>
+<h4 id="switzerland">Switzerland</h4>
+<ul>
+<li><a href="http://www.swisstopo.admin.ch/internet/swisstopo/en/home/products/freeproducts.html">SwissTopo</a>: Data from the Swiss National Mapping Agency including boundaries, 1:1 million vector maps, Landsat images, geological maps and a map of Switzerland during the last glacial maximum.</li>
+<li><a href="http://www.geo.admin.ch/internet/geoportal/en/home.html">Swiss Geoportal</a>: The Geoportal of the Swiss Confederation - with some data available directly and others via links to other sites.</li>
+</ul>
+<h4 id="united-kingdom-uk">United Kingdom (UK)</h4>
+<ul>
+<li><strong>General</strong><ul>
+<li><a href="https://www.ordnancesurvey.co.uk/opendatadownload/products.html">OS OpenData</a>: Many Ordnance Survey mapping products available in both vector and raster formats. Resolutions from 1:250k to 1:10k as well as detailed gazateers, boundary datasets and post-code point locations. Now also includes topologically correct road and river networks, and more detailed topographic map data.</li>
+<li><a href="http://data.gov.uk/">Data.gov.uk</a>: Huge amounts of data, a fair proportion of which is georeferenced. Useful datasets include <a href="http://data.gov.uk/dataset/nptdr">snapshots of public transport journeys</a> and <a href="http://neighbourhood.statistics.gov.uk/">lists of public transport stops</a>.</li>
+<li><a href="http://sharegeo.ac.uk/">ShareGeo Open</a>: Directory of free GIS data for the UK, easily searchable - includes wide range of data including boundaries, national parks, contours, archeological sites and much more.</li>
+<li><a href="http://magic.defra.gov.uk/home.htm">MAGIC Datastore</a>: A wide range of datasets for the UK including boundaries, pipelines, urban areas, health and safety and more. <em>Many entries in the database are links to other sites and some require registration.</em></li>
+<li><a href="http://www.npemap.org.uk/">New Popular Edition OS Maps</a>: Scans of many of the (out-of-copyright) New Popular Edition OS maps from the 1940s and 1950s. Available to view online and to download by contacting the authors.</li>
+<li><a href="http://www.guardian.co.uk/news/datablog/interactive/2013/jan/14/all-our-datasets-index">Guardian Datablog</a>: Wide range of data, mostly UK-focused but some international, collected by The Guardian newspaper in the UK.</li>
+<li><a href="https://www.geomatics-group.co.uk/GeoCMS/Order.aspx">Geomatics Group LiDAR</a>: LiDAR data covering a good proportion of the UK, as DSMs and DTMs, freely available for non-commercial usage. <span class="label label-info">Registration Required</span></li>
+<li><a href="http://www.geostore.com/environment-agency/WebStore?xml=environment-agency/xml/ogcDataDownload.xml">Environment Agency GeoStore</a>: A wide range of GIS data from the UK Environment Agency, including canal/river data, listed buildings, environmental restrictions, protected areas and more.</li>
+</ul>
+</li>
+<li><strong>Ecology</strong><ul>
+<li><a href="http://www.gis.naturalengland.org.uk/pubs/gis/GIS_register.asp">Natural England</a>: Natural landscape boundaries including areas of National Parks, National Nature Reserves, SSSIs, Common Land, AONBs, Bogs, Mudflats etc.</li>
+</ul>
+</li>
+<li><strong>Oceanography</strong><ul>
+<li><a href="http://www.scotland.gov.uk/Topics/marine/science/MSInteractive/Themes">Marine Scotland Interactive</a>: A range of data on the seas around Scotland, including monitoring stations, renewable energy, protected areas and wildlife data.</li>
+</ul>
+</li>
+<li><strong>Atmosphere, Weather and Climate</strong><ul>
+<li><a href="http://www.metoffice.gov.uk/datapoint/getting-started">Met Office DataPoint</a>: A range of forecast and observation data from the UK Met Office, provided through an API which allows download in a range of formats, including map overlays, text and images.</li>
+<li><a href="http://naei.defra.gov.uk/mapping/mapping_2008.php">Natural Atmospheric Emissions Inventory</a>: Maps of atmospheric polluntants including greenhouse gases and particulate matter concentrations. Available for download as ASCII Grid files.</li>
+<li><a href="http://pollutantdeposition.defra.gov.uk/data">UK Pollutant Deposition</a>: Maps of pollutant deposition across the UK for chemicals such as ammonium, nitric acid, nitrogen and sulphur dioxide.</li>
+</ul>
+</li>
+<li><strong>Energy</strong><ul>
+<li><a href="http://www.nationalgrid.com/uk/LandandDevelopment/DDC/GasElectricNW/undergroundcables/shape/">National Grid GIS data</a>: Shapefiles with locations of power transmission lines, underground cables, substations and more.</li>
+<li><a href="https://www.gov.uk/oil-and-gas-digital-data-exchange-format">DECC oil and gas well locations</a>: Locations of all oil and gas wells within UK juristiction, available in Excel format.</li>
+</ul>
+</li>
+<li><strong>Historical Data</strong><ul>
+<li><a href="http://hds.essex.ac.uk/history/data/access.asp">Great Britain Historical Database Online</a>: Historical statistics linked to spatial areas including census data, births/marriages/deaths statistics and many others. <emph></li>
+<li><a href="http://www.english-heritage.org.uk/professional/research/archaeology/atlas-of-rural-settlement-gis/">Atlas of Rural Settlement in England</a>: GIS data of the maps from Brian Roberts and Stuart Wrathmella's <em>An Atlas of Rural Settlement in England</em>, including extensive metadata. Includes locations of settlements, provinces and regions as well as terrain types and more.</li>
+</ul>
+</li>
+<li><strong>Geology</strong><ul>
+<li><a href="http://www.bgs.ac.uk/data/services/home.html">British Geological Survey Web Data</a>: A range of geological data including earthquake locations available as web-services, KML files and shapefiles.</li>
+</ul>
+</li>
+<li><strong>Population</strong><ul>
+<li><a href="https://geoportal.statistics.gov.uk/geoportal/catalog/main/home.page">ONS Geoportal</a>: Downloadable data from the Office for National Statistics, including census data, administrative boundaries, postcode locations etc.</li>
+<li><a href="http://census.ukdataservice.ac.uk/get-data/boundary-data.aspx">Census boundary data</a>: Boundaries for census data areas, for both current and historical censuses</li>
+</ul>
+</li>
+<li><strong>Education</strong><ul>
+<li><a href="http://www.education.gov.uk/edubase/home.xhtml">Edubase</a>: Data from the UK Government on all educational establishments (Nurseries, Primary Schools, Secondary Schools, Universities) in England and Wales. <em>To download data, click Subscribe on the left and register. Two downloads are permitted per year.</em></li>
+</ul>
+<li><strong>Buildings and Points of Interest</strong><ul>
+<li><a href="http://dracos.co.uk/made/locating-postboxes/export.php">Postbox locations</a>: Locations of Royal Mail postboxes across the UK, derived from a Freedom of Information request to Royal Mail, plus OpenStreetMap data. <emph>Provided in tab-separated format, with latitude and longitude co-ordinates</emph></li>
+<li><a href="http://geolytix.co.uk/data-and-software/postal-boundaries">Postcode boundaries</a>: Postcode boundaries at multiple levels (from postal town areas to unit postcodes), released under an open data license.</li>
+<li><a href="http://www.opendoorlogistics.com/data/">Postcode boundaries</a>: Similar to the above, but more up-to-date, and generated from CodePoint Open.</li>
+</ul>
+</li>
+<li><strong>Misc</strong><ul>
+<li><a href="https://data.police.uk/data/archive/">Police data archive</a>: Police data showing all recorded crimes and their location, type and eventual outcome.</li>
+</ul>
+</li>
+<li><strong>City-specific</strong><ul>
+<li><a href="http://data.london.gov.uk/">London Open Data</a>: Open access to data that the Greater London Authority and other related organisations holds</li>
+</ul>
+</li>
+</ul>
+<h4 id="united-arab-emirates">United Arab Emirates</h4>
+<ul>
+  <li><a href="http://enviroportal.ead.ae/geoportal/catalog/download/download.page">Abu Dhabi EnviroPortal</a>: Wide range of environmental data for the emirate of Abu Dhabi.</li>
+</ul>
+<h4 id="united-states-of-america-usa">United States of America (USA)</h4>
+<ul>
+<li><strong>General</strong><ul>
+<li><a href="http://nationalatlas.gov/atlasftp.html">US National Atlas</a>: All raw data contained in the National Altas is available for downloading including everything from agricultural census data, presidential election results, airports, railways, glaciers, arsenic content in groundwater, and much more.</li>
+<li><a href="http://nationalmap.gov/historical/">USGS Historical Topographic Maps</a>: Electronic copies of USGS Topographic Maps from the last 125 years. <em>Provided in GeoPDF format, which isn't great for importing into GIS software, but apparently can be converted to GeoTIFF in the latest version of GDAL</em></li>
+<li><a href="http://www.ngdc.noaa.gov/nndc/struts/results?op_2=ne&amp;v_2=STORE&amp;t=102759&amp;s=15&amp;d=10,15,11">National Geophysical Data Center</a>: List of all free data from the NGDC - sorted alphabetically not by category, but includes elevation models, land cover, seismology and more.</li>
+<li><a href="http://www.cec.org/Page.asp?PageID=1226&SiteNodeID=496">North American Environmental Atlas</a>: Environmental data for the whole of the North American continent, including land cover, pollution, climate, ecosystems, human influence and protected species, in raster and vector formats.</li>
+</ul>
+</li>
+<li><strong>Boundaries and Shorelines</strong><ul>
+<li><a href="http://www.census.gov/geo/www/cob/bdy_files.html">US Cartographic Boundaries</a>: Cartographic boundaries, including city boundaries, counties, school districts, voting districts, zip code areas and congressional districts. Mainly from the 2000 census, but some later data.</li>
+<li><a href="http://www.zillow.com/howto/api/neighborhood-boundaries.htm">US Neighbourhood Boundaries</a>: Creative-commons licensed data from Zillow showing the extent of neighbourhoods in urban areas. </li>
+<li><a href="http://www.ngdc.noaa.gov/mgg/shorelines/noaamrdvs.html">NOAA Medium Resolution Digital Vector Shoreline</a>: US coastlines compiled from official NOAA coastal charts covering nearly 75,000 nautical miles of coastline.</li>
+<li><a href="http://www.charts.noaa.gov/?Disclaimer=noaa%21nos%40ocs%23mcd&amp;Submit=Proceed+to+Chart+Downloader">Office of Coast Survey Chart Downloader</a>: Free access to NOAA marine navigational charts.</li>
+</ul>
+</li>
+<li><strong>Land Cover and Vegetation</strong><ul>
+<li><a href="http://www.mrlc.gov/finddata.php">National Land Cover Database 2001 and 2006</a>: NLCD data for download at 30m resolution. Data includes raw land cover information (in 16 classes) and data on changes between 2001 and 2006.</li>
+<li><a href="http://phenology.cr.usgs.gov/index.php">Phenology</a>: Seasonal changes in vegetation across the US from remote sensing images. Various datasets including Start of Season Time, Time of Maximum, Amplitude and Time-Integrated NDVI.</li>
+<li><a href="http://earlywarning.usgs.gov/USirrigation/">MODIS Irrigated Agriculture dataset</a>: Raster irrigated area maps for the US, derived from MODIS data and available at 250m and 1km resolutions.</li>
+<li><a href="http://landcovertrends.usgs.gov/index.html">USGS Land Cover Trends</a>: Land Cover Trends from approximately 1970 until 2000 at approximately 30m resolution.</li>
+<li><a href="http://www.csc.noaa.gov/crs/lca/pacificcoast.html">Pacific Coast Land Cover</a>: Land Cover from 1996, 2001 and 2006 derived from Landsat images for the Pacific Coast of the USA (California, Oregon and Washington). 30m resolution.</li>
+<li><a href="http://egsc.usgs.gov/data.html">Chesapeake Bay Land Cover</a>: Land cover for the Chesapeake Bay Watershed for 1984, 1992, 2001 and 2006.</li>
+<li><a href="http://www.csc.noaa.gov/digitalcoast/data/ccapregional/">Coastal Change Analysis Program</a>: Nationally standardised database of land cover and land cover change information for the coastal areas of the US. Available in various raster formats.</li>
+</ul>
+</li>
+<li><strong>Elevation</strong><ul>
+<li><a href="http://seamless.usgs.gov/ned1.php">National Elevation Dataset</a>: Regularly updated DEM for the whole of the US, Puerto Rico and the Virgin Islands. Varies from 10m-30m resolution, using best available data for each region.</li>
+<li><a href="http://www.ngdc.noaa.gov/mgg/greatlakes/greatlakes.html">Great Lakes Bathymetry</a>: Detailed bathymetry data for the Great Lakes at 3 arc-second resolution. To download data click the <em>Create Custom Grids</em> and fill in the areas you want.</li>
+<li><a href="http://www.ngdc.noaa.gov/mgg/coastal/coastal.html">Coastal Relief</a>: Various coastal DEMs of the USA at various resolutions. Whole US coastline combining bathymetry and land elevation out to the end of the continental slope is available at 3 arc-second resolution, and various areas available at higher resolution.</li>
+<li><a href="http://pugetsoundlidar.ess.washington.edu/">Pudget Sound Lidar Consortium</a>: Public-domain high-resolution LiDAR dataset for the Pacific Northwest. <span class="label label-info">Registration Required</span></li>
+</ul>
+</li>
+<li><strong>Weather and Climate</strong><ul>
+<li><a href="http://www.nrel.gov/gis/data_wind.html">NREL Wind</a>: Wind availablity data across the US from the perspective of wind turbine generation.</li>
+<li><a href="http://nsidc.org/data/docs/noaa/g02158_snodas_snow_cover_model/index.html">Snow Data Assimilation System</a>: Gridded data at 30 arc-seconds, from September 2003 till present, including snow depth, snow water equivalent, solid precipitation, liquid precipitation and more. Contiguous US only.</li>
+<li><a href="http://rredc.nrel.gov/solar/old_data/nsrdb/">National Solar Radiation Database</a>: Over thirty years of solar radiation data from sites across the US, Guam and Puerto Rico, plus raster data at around 2km resolution.</li>
+</ul>
+</li>
+<li><strong>Ecology</strong><ul>
+<li><a href="https://edg.epa.gov/metadata/catalog/main/home.page">EPA Environmental Dataset Gateway</a>: Catalog giving access to all environmental data from the Environmental Protection Agency.</li>
+<li><a href="http://www.natureserve.org/getData/USecologyData.jsp">Terrestrial Ecosystems of the United States</a>: A mid-scale ecological classification consisting of over 800 ecosystem types found across North America.</li>
+<li><a href="http://www.natureserve.org/getData/animalData.jsp">Digital Species Distribution Maps</a>: Data showing distribution of a range of types of species (pollinators, birds, mammals etc.) across the USA. Downloadable as one, or split into species.</li>
+<li><a href="http://sedac.ciesin.columbia.edu/species/">Bird and Mammal Species Distribution Grids</a>: Raster grids showing species distribution across the US of birds and mammals. One grid per species, approximately 1km resolution.</li>
+<li><a href="http://www.fws.gov/wetlands/data/DataDownload.html">National Wetlands Inventory</a>: Wetland extent and type across the US, including information on riparian vegetation.</li>
+<li><a href="http://gapanalysis.usgs.gov/data/padus-data/">Protected Areas Database of the US</a>: Shapefile of all protected areas in the US including attribute data description uses, reasons for protection and legal status.</li>
+<li><a href="http://gapanalysis.usgs.gov/data/land-cover-data/">Ecological Land Cover Map</a>: The most complete map ever produced of vegetative associations for the US. Land cover is classified in to 551 Ecological Systems and 32 Modified Ecological Systems (areas where human impacts have affected the ecology). Available for download as ARC GRID or ERDAS IMAGE</li>
+<li><a href="http://websoilsurvey.nrcs.usda.gov/app/">Web Soil Survey</a>: Downloadable soil data for the US in both tabular (csv) and geospatial (shp) formats.</li>
+<li><a href="http://www.fws.gov/gis/data/national/index.html">US Fish and Wildlife Service National GIS datasets</a>: Information and boundaries for Coastal Barrier Resource Systems, Critical Habitats, Ecosystem Regions, National Wetlands, National Wildlife Refuge Systems etc.</li>
+</ul>
+</li>
+<li><strong>Geology</strong><ul>
+<li><a href="http://tin.er.usgs.gov/geology/state/">Geological maps of the US states</a>: Detailed geological maps with extended attribute data for each of the US states. <em>To download data select the state, then the area, then click the reference link at the bottom. Scroll down to the bottom and the files are available for download.</em></li>
+<li><a href="http://tin.er.usgs.gov/geology/us/">Geology of the conterminous US</a>: Similar to the above but in one file for the coterminous US, not including Hawaii and Alaska. Far easier to download than the above.</li>
+<li><a href="http://tin.er.usgs.gov/magnetic/">Magnetic Anomalies</a>: Airborne measurement of magnetic anomalies across the whole of North America, in raster format.</li>
+<li><a href="http://energy.usgs.gov/Tools/EnVisionSplash.aspx">USGS EnergyVision</a>: Maps of various factors relating to energy use in the USA, the most relevant of which is the USA and world-wide geological maps. <em>To download, view the web map, then click on the dropdown box labelled MORE and scroll to the Download GIS data option</em></li>
+</ul>
+</li>
+<li><strong>Hydrology</strong><ul>
+<li><a href="http://nhd.usgs.gov/data.html">National Hydrography Dataset</a>: Geodatabases of hydrological information for the US, including lakes, ponds, streams, rivers, dams and streamgauges. Topologically-correct network is available allowing for flow modelling.</li>
+<li><a href="http://infotrek.er.usgs.gov/apex/f?p=NAWQA:HOME:0">National Water Quality Assessment Data Warehouse</a>: Huge amounts of georeferenced data (although not always provided as GIS-ready files) about water quality, including groundwater and surfacewater sampling, discharges and health information.</li>
+<li><a href="http://gaia.geosci.unc.edu/NARWidth/index.html">North American River Width Data Set (NARWidth)</a>: Width measurements of rivers in North America, at approximately mean discharge, from satellite data. Provided as vector points, with a range of useful attributes.</li>
+</ul>
+</li>
+<li><strong>Census</strong><ul>
+<li><a href="http://www.census.gov/geo/www/tiger/">TIGER</a>: US-wide census data.</li>
+<li><a href="http://www.census.gov/geo/www/tiger/tgrshp2010/tgrshp2010.html">TIGER/Line 2010</a>: 2010 extracts from the census database. These files contain the boundaries of census areas, which can then be linked to census data tables.</li>
+<li><a href="http://sedac.ciesin.columbia.edu/usgrid/">US Census Grids</a>: Raster griddded datasets for census variables across the US for data from 2000. Approximately 1km resolution.</li>
+<li><a href="http://sedac.ciesin.columbia.edu/data/collection/acrp">Archive of Census-related Products</a>: A range of census-related products produced by a research project at CIESIN including boundary, migration and microdata samples.</li>
+<li><a href="http://toddata.cnt.org/">TOD Database</a>: Economic and demographic information for areas around fixed transit station in the US. Available at three levels - 1/2 mile buffer around station, aggregated transit zones, transit regions. <span class="label label-info">Registration required</span></li>
+</ul>
+</li>
+<li><strong>History</strong><ul>
+<li><a href="https://www.nhgis.org/">National Historical GIS</a>: Historical GIS data for the USA, including demographics, ancestry, education and more.</li>
+</ul>
+</li>
+<li><strong>Crime and Justice</strong><ul>
+<li><a href="http://www.icpsr.umich.edu/icpsrweb/NACJD/gis/data.jsp">National Archive of Criminal Justice Data</a>: Crime data from the US, including various statistics - all geo-referneced but not necessarily provided in GIS-ready formats.</li>
+</ul>
+</li>
+<li><strong>Power and Energy</strong><ul>
+<li><a href="http://www.mapcruzin.com/renewable-energy-us-electric-transmission-shapefiles.htm">US National Power Grid</a>: Data from FEMA (the Federal Emergency Management Agency) showing rough locations of transmission lines and their connectivities. Data from 1993 and has not been updated since.</li>
+<li><a href="http://www.epa.gov/cleanenergy/energy-resources/egrid/index.html">Emissions & Generation Resource Integrated Database</a>: A comprehensive data source on the environmental characteristics (air emissions, resource mix, net generation and more) of all electrical power sources in USA. Each record contains location information, allowing use in GIS.</li>
+<li><a href="http://www.eia.gov/maps/layer_info-m.cfm">US Energy Information Administration</a>: Individual layers from their interactive mapping system, including coal mines, crude oil pipelines, petrochemical crackers, refineries and more.</li>
+</ul>
+</li>
+<li><strong>State-specific</strong><ul>
+<li><em>The links below are to individual states' GIS data sites. They normally contain a wide range of data for the state, including administrative boundaries, ortho-photos, climate data, DEMs and building footprints. Of course, every state is different so some states may have more/less data than others. Descriptions are only provided below when a site has significantly different data to that listed above</em></li>
+<li><a href="http://www.geostor.arkansas.gov/G6/Home.html">Arkansas</a></li>
+
+<li><a href="http://clear.uconn.edu/data/CT_DEM/ct_dem_download.asp">Connecticut LiDAR DEM</a>: 3m resolution DEM for the state of Connecticut. Can be downloaded by town or by geographic quadrangle.</li>
+<li><a href="http://www.fgdl.org/metadataexplorer/explorer.jsp">Florida Geographic Data Library Explorer</a></li>
+<li><a href="https://data.georgiaspatial.org/">Georgia GIS Clearinghouse</a></li>
+<li><a href="http://www.csc.noaa.gov/ccap/pacific/">Hawaii High Resolution Land Cover</a>: Land cover maps for all Hawaiian islands apart from the Big Island, for 1992, 2001 and 2005. 1992 and 2001 data are from Landsat, 2005 from 2.4m Quickbird.</li>
+<li><a href="http://maps.indiana.edu/layerGallery.html">IndianaMAP</a></li>
+<li><a href="http://gis.iu.edu/isdp_dl/map/m10000.html">Indiana Spatial Data Portal</a></li>
+<li><a href="http://www.igsb.uiowa.edu/nrgislibx/">Iowa Natural Resources GIS Library</a>: State-wide data on natural resources including geology, agriculture, hydrology and land cover.</li>
+<li><a href="http://www.kansasgis.org/catalog/index.cfm">Kansas GIS Data Access and Support Center</a></li>
+<li><a href="http://kygisserver.ky.gov/geoportal/catalog/main/home.page">Kentucky Geoportal</a></li>
+<li><a href="http://atlas.lsu.edu/rasterdown.htm">Louisiana State Atlas</a></li>
+<li><a href="http://www.maine.gov/megis/catalog/">Maine Office of GIS</a></li>
+<li><a href="http://apps.msl.mt.gov/Geographic_Information/Data/DataList/">Montana Data List</a></li>
+<li><a href="http://www.mass.gov/mgis/laylist.htm">Massachusetts GIS Layers</a></li>
+<li><a href="http://www.mcgi.state.mi.us/mgdl/?action=thm">Michigan Center for Geographic Information</a></li>
+<li><a href="http://www.nysgis.state.ny.us/gisdata/inventories/member.cfm?organizationID=522">New York State GIS Clearinghouse</a></li>
+<li><a href="http://rgis.unm.edu/browsedata">New Mexico Resource GIS program</a></li>
+<li><a href="http://www.nconemap.com/">North Carolina OneMap</a></li>
+<li><a href="http://ogrip.oit.ohio.gov/ServicesData/GeodataDistribution.aspx">Ohio Geographically Referenced Information Program</a></li>
+<li><a href="http://www.owrb.ok.gov/maps/PMG/DMindex.html">Oklahoma Water Resources Board GIS data</a></li>
+<li><a href="http://www.pasda.psu.edu/">Pennsylvania Spatial Data Access</a></li>
+<li><a href="http://tnmap.state.tn.us/portal2/">Tennessee Enterprise GIS Portal</a></li>
+<li><a href="http://www.state.tn.us/environment/parks/gis/data/">Tennessee State Parks data</a></li>
+<li><a href="http://www.tnris.org/">Texas Natural Resources Information System</a></li>
+<li><a href="http://library.tamu.edu/about/collections/map-gis-collections-services/gis-data-online-interactive-maps/gis-online-data.html">Texas University Libraries GIS data</a></li>
+<li><a href="http://gis.utah.gov">Utah GIS Portal</a></li>
+<li><a href="http://www.vcgi.org/dataware/?page=./theme_index/default_content.cfm">Vermont Center for Geographic Information</a></li>
+<li><a href="http://www.wsdot.wa.gov/mapsdata/geodatacatalog/">Washington State Department of Transport</a>: Various transport-related datasets for Washington including airports, ferry routes, railways and traffic counts. Also includes some non-transport data including relief, national scenic areas and major lakes.</li>
+<li><a href="http://wvgis.wvu.edu/">West Virginia GIS Technical Centre</a></li>
+<li><a href="http://wygl.wygisc.org/wygeolib/catalog/main/home.page">Wyoming GIS</a></li>
+</ul>
+</li>
+<li><strong>City or Region specific</strong><ul>
+<li><a href="http://www.nyc.gov/html/doitt/html/eservices/eservices_gis_downloads.shtml">New York City GIS</a>: Data specific to New York city including building footprints, street centrelines, pavement edges, open space, railways, shorelines and elevation. All provided as shapefiles and MapInfo files.</li>
+<li><a href="http://www.nyc.gov/html/dcp/html/bytes/applbyte.shtml">Bytes of the Big Apple</a>: Linear basemaps, zoning information and areas of particular planning interest for New York City.</li>
+<li><a href="http://dcatlas.dcgis.dc.gov/catalog/">Washington DC GIS Clearinghouse</a>: GIS data from the city of Washington DC including base maps, POI locations, street plans and much more.</li>
+<li><a href="http://www.bostonredevelopmentauthority.org/BRA_3D_Models/Index.html">3D models of Boston</a>: Building footprints and 3D models of a large part of Boston.</li>
+<li><a href="http://www.chesapeakebay.net/data">Chesapeake Bay Program</a>: GIS data for Chesapeake Bay, including water quality and ecology datasets.</li>
+<li><a href="http://mycity.houstontx.gov/home/cohgis.html">MyCity Houston</a></li>
+<li><a href="http://data.ohouston.org/">Houston Open Data</a></li>
+<li><a href="http://pdata.hcad.org/GIS/">Harris County GIS data</a></li>
+
+</ul>
+</li>
+</ul>
+
+<hr />
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- FreeGISBanner3 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-0651515465088743"
+     data-ad-slot="4799066755"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<hr />
+
+
+<a name="faq"></a>
+<h2 class="with-padding">Frequently Asked Questions (FAQ)</h2>
+<ol>
+
+  <li>
+    <h5>Who are you?</h5>
+    <p>I'm Robin Wilson, a researcher at the <a href="http://www.soton.ac.uk">University of Southampton</a>. See my <a href="http://www.rtwilson.com/academic/">academic website</a> for more information on my research.</p>
+  </li>
+
+   <li>
+    <h5>Why did you create this?</h5>
+    <p>I kept coming across GIS datasets online that looked like they might be useful - for my research, my friends research, or just for fun! I thought I'd keep a list of the ones that looked good - and then decided to put it online so that other people could benefit from it too. Fast-forward a few months and this is what you have: over three-hundred links, and hundreds of hits per day.</p>
+  </li>
+  <li>
+    <h5>Where did you find the datasets?</h5>
+    <p>A variety of places really. Some I knew about already, and some I had used in my research (or read about in the scientific literature). Others I came across online, particularly through <a href="http://gis.stackexchange.com">GIS.SE</a> and the <a href="http://www.linkedin.com/groups/GIS-49657?home=&gid=49657&trk=anet_ug_hm">GIS LinkedIn group</a>. A number of items came from a wide-range of people who sent me links, asking me to add them to this site.</p>
+  </li>
+  <li>
+    <h5>What are the requirements for a dataset in this list?</h5>
+    <p>As you might guess from the title - I only list <strong>free</strong> GIS datasets here. That word is rather ambiguous (just ask Richard Stallman!), but here I use the meaning of 'free as in beer', and I include sites that provide data free for non-commercial purposes. Funnily enough, given the title, I don't link to datasets that cost money!</p>
+  </li>
+  <li>
+    <h5>Is there anything I can do to help?</h5>
+    <p>I'm glad you asked - of course there is! Three things really: you can tell your friends and colleagues about the site (see the Facebook and Twitter links on the top-right?), you can email me information about new datasets to link to (see below), and you can donate some money (see that button on the top-right?) to help me cover the costs of hosting this.</p>
+  </li>
+  <li>
+    <h5>How can I contact you?</h5>
+    <p>Email me at robin@rtwilson.com and I'll get back to you as soon as possible.</p>
+    <p class="text-error">Please <strong>don't</strong> email me about commercial datasets (I'm not interested) or to ask me if I can get hold of data on a particular topic. Every dataset I know about is listed on this site!
+  </li>
+</ol>
+
+
+    </div> <!-- /container -->
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+
+    <script>
+    // Outbound Link Tracking with Google Analytics
+  // Requires jQuery 1.7 or higher (use .live if using a lower version)
+  $(function() {
+      $("a").on('click',function(e){
+          var url = $(this).attr("href");
+          // Console logs shows the domain name of the link being clicked and the current window
+          // console.log('e.currentTarget.host: ' + e.currentTarget.host);
+          // console.log('window.location.host: ' + window.location.host);
+          // If the domains names are different, it assumes it is an external link
+          if (e.currentTarget.host != window.location.host) {
+            var link_type = "outbound";
+          }
+          else {
+            var link_type = "internal"
+          }
+          // Be careful with this if you use subdomains
+          // console.log('external link click');
+          // Outbound link! Fires the Google tracker code.
+          ga('send', 'event', link_type, 'click', url);
+          // Checks to see if the ctrl or command key is held down
+          // which could indicate the link is being opened in a new tab
+          if (e.metaKey || e.ctrlKey) {
+              // console.log('ctrl or meta key pressed');
+              var newtab = true;
+          }
+          // If it is not a new tab, we need to delay the loading
+          // of the new link for a just a second in order to give the
+          // Google track event time to fully fire
+          if (!newtab) {
+              // console.log('default prevented');
+              e.preventDefault();
+              // console.log('loading link after brief timeout');
+              setTimeout('document.location = "' + url + '"', 100);
+          }
+      });
+  });
+</script>
+  </body>
+</html>
